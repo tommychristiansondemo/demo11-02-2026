@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FR Copilot</title>
+  <meta name="description" content="FR Copilot: retirement readiness and coverage-gap assistant for financial representatives (synthetic demo data).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b2545'/%3E%3Cpath d='M9 22V10h9M9 16h7M20 22l3-6 3 6' stroke='%2337c4b0' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Sign in -->
+  <main id="login-view" class="login" hidden>
+    <form id="login-form" class="login-card" autocomplete="on">
+      <div class="brand brand-lg"><span class="mark">FR</span><span>FR Copilot</span></div>
+      <p class="muted">Retirement readiness and coverage-gap assistant for financial representatives.</p>
+      <div class="mode-tabs" role="tablist">
+        <button id="mode-signin" class="mode active" type="button" role="tab" aria-selected="true">Sign in</button>
+        <button id="mode-signup" class="mode" type="button" role="tab" aria-selected="false">Create an account</button>
+      </div>
+      <label>Username<input id="username" name="username" autocomplete="username" required maxlength="32"></label>
+      <label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label>
+      <label id="confirm-wrap" hidden>Confirm password<input id="password2" name="password2" type="password" autocomplete="new-password"></label>
+      <p id="signup-help" class="hint" hidden>Pick any username (3-32 letters, digits, <code>.</code> <code>_</code> <code>-</code>) and a password of at least 6 characters. No email or confirmation needed. Create as many IDs as you like; each works here and in Insights.</p>
+      <button id="login-btn" class="btn primary" type="submit">Sign in</button>
+      <p id="login-error" class="error" role="alert" hidden></p>
+      <a class="insights-cta insights-link" href="https://insights.awsteach.com" target="_blank" rel="noopener">
+        <span class="cta-icon" aria-hidden="true">⚙</span>
+        <span><b>Under the hood</b><br><span class="muted small">Ask how FR Copilot was built and explore live logs and LLM reasoning</span></span>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <p class="fineprint">Demo environment. All clients are synthetic. For illustration only, not financial advice.</p>
+    </form>
+  </main>
+
+  <!-- App -->
+  <div id="app-view" class="app" hidden>
+    <header class="topbar">
+      <div class="brand"><span class="mark">FR</span><span>FR Copilot</span><span class="tag">AgentCore demo</span></div>
+      <div class="topbar-right">
+        <a class="btn ghost insights-link" href="https://insights.awsteach.com" target="_blank" rel="noopener" title="How FR Copilot is built: knowledge chatbot, live logs and LLM reasoning">Under the hood ↗</a>
+        <button id="new-chat" class="btn ghost" type="button" title="Start a new conversation">New chat</button>
+        <button id="toggle-tools" class="btn ghost only-narrow" type="button">Tool calls <span id="tool-badge" class="badge">0</span></button>
+        <span id="whoami" class="who"></span>
+        <button id="logout" class="btn ghost" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="clients" aria-label="Clients">
+        <div class="pane-head">
+          <h2>Clients</h2><span id="client-count" class="muted small"></span>
+        </div>
+        <input id="client-search" class="search" type="search" placeholder="Search name, occupation or ID" aria-label="Search clients">
+        <ul id="client-list" class="client-list" role="listbox"></ul>
+      </aside>
+
+      <section class="chat" aria-label="Conversation">
+        <div id="client-card" class="client-card" hidden></div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <form id="composer" class="composer">
+          <textarea id="prompt" rows="1" placeholder="Pick a client, then ask a question..." aria-label="Message" maxlength="4000"></textarea>
+          <button id="send" class="btn primary" type="submit" disabled>Send</button>
+        </form>
+        <p class="fineprint center">Synthetic data · Claude on Amazon Bedrock with Guardrails · For illustration only, not financial advice.</p>
+      </section>
+
+      <aside id="tools-pane" class="tools" aria-label="MCP tool calls">
+        <div class="pane-head"><h2>MCP tool calls</h2><span id="tool-summary" class="muted small"></span></div>
+        <div class="legend">
+          <span class="chip profile">client-profile-mcp</span><span class="chip calc">planning-calc-mcp</span>
+        </div>
+        <ol id="tool-log" class="tool-log"></ol>
+        <p id="tool-empty" class="muted small">Tools the agent calls through the AgentCore Gateway will appear here.</p>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

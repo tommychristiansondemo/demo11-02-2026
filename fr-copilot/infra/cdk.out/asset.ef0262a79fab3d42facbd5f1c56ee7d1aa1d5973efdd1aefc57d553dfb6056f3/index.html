@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FR Copilot Insights</title>
+  <meta name="description" content="Under the hood of the FR Copilot class demo: ask how it was built, and explore live logs and LLM reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23231a4f'/%3E%3Ccircle cx='16' cy='16' r='6' stroke='%23a78bfa' stroke-width='2.6' fill='none'/%3E%3Cpath d='M16 4v5M16 23v5M4 16h5M23 16h5' stroke='%23a78bfa' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main id="login-view" class="login" hidden>
+    <form id="login-form" class="card login-card" autocomplete="on">
+      <div class="brand brand-lg"><span class="mark">⚙</span><span>FR Copilot <em>Insights</em></span></div>
+      <p class="muted">Look under the hood of the FR Copilot demo: how it was designed and deployed, its live logs, and the reasoning behind every LLM call.</p>
+      <div class="mode-tabs" role="tablist">
+        <button id="mode-signin" class="mode active" type="button" role="tab" aria-selected="true">Sign in</button>
+        <button id="mode-signup" class="mode" type="button" role="tab" aria-selected="false">Create an account</button>
+      </div>
+      <label>Username<input id="username" autocomplete="username" required maxlength="32"></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+      <label id="confirm-wrap" hidden>Confirm password<input id="password2" type="password" autocomplete="new-password"></label>
+      <p id="signup-help" class="hint" hidden>Any username (3-32 letters, digits, <code>.</code> <code>_</code> <code>-</code>) and a password of 6+ characters. No email or confirmation. The same ID works in FR Copilot.</p>
+      <button id="login-btn" class="btn primary" type="submit">Sign in</button>
+      <p id="login-error" class="error" role="alert" hidden></p>
+      <p class="fineprint">Use the same ID as FR Copilot. <a class="app-link" href="https://www.awsteach.com">← Back to FR Copilot</a></p>
+    </form>
+  </main>
+
+  <div id="app-view" class="app" hidden>
+    <header class="topbar">
+      <div class="brand"><span class="mark">⚙</span><span>FR Copilot <em>Insights</em></span><span class="tag">Under the hood</span></div>
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab active" data-view="ask" role="tab" aria-selected="true">Ask</button>
+        <button class="tab" data-view="knowledge" role="tab" aria-selected="false">Knowledge file</button>
+      </nav>
+      <div class="topbar-right">
+        <a class="btn ghost app-link" href="https://www.awsteach.com">FR Copilot ↗</a>
+        <span id="whoami" class="who"></span>
+        <button id="logout" class="btn ghost" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <section id="view-ask" class="view ask">
+      <div id="thread" class="thread" aria-live="polite">
+        <div id="welcome" class="welcome">
+          <h1>Ask anything about how FR Copilot works</h1>
+          <p class="muted">Answers come from <b>projectknowledge.md</b> (kept in S3 and updated on every deployment) plus live tools that read CloudWatch logs, Bedrock model-invocation logs (prompts and <b>reasoning</b>), CloudFormation and metrics. The chatbot runs on Claude Haiku 4.5 on Amazon Bedrock.</p>
+          <div class="sugg-groups">
+            <div><h2>Design</h2>
+              <button class="suggestion">Where does FR Copilot get its client data?</button>
+              <button class="suggestion">Which LLMs are used, and why?</button>
+              <button class="suggestion">How does auth work between the agent, the Gateway and the MCP servers?</button>
+              <button class="suggestion">How does student sign-up work without confirmation emails?</button>
+            </div>
+            <div><h2>Live inventory</h2>
+              <button class="suggestion">How many different types of AWS resources are in use, and how many of each?</button>
+              <button class="suggestion">How many tokens have both models used in the last 24 hours?</button>
+            </div>
+            <div><h2>Logs and reasoning</h2>
+              <button class="suggestion">Show the reasoning from the last 3 FR Copilot agent LLM calls.</button>
+              <button class="suggestion">Show your own reasoning log for recent Insights questions.</button>
+              <button class="suggestion">Which MCP tools did the agent call in the last hour, and how long did they take?</button>
+              <button class="suggestion">Were there any errors in any component today?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="composer" class="composer">
+        <textarea id="prompt" rows="1" maxlength="4000" placeholder="Ask about the design, deployment, logs or LLM reasoning…" aria-label="Message"></textarea>
+        <button id="send" class="btn primary" type="submit" disabled>Ask</button>
+      </form>
+    </section>
+
+    <section id="view-knowledge" class="view knowledge" hidden>
+      <div class="kn-head">
+        <div>
+          <h1>projectknowledge.md</h1>
+          <p id="kn-meta" class="muted small"></p>
+        </div>
+        <div class="kn-actions">
+          <button id="kn-refresh" class="btn" type="button">Refresh</button>
+          <button id="kn-download" class="btn" type="button">Download .md</button>
+        </div>
+      </div>
+      <details id="kn-history" class="kn-history"><summary>Version history</summary><ol id="kn-versions"></ol></details>
+      <article id="kn-body" class="md doc"></article>
+    </section>
+  </div>
+</body>
+</html>

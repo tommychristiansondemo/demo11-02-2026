@@ -1,0 +1,2082 @@
+[
+ {
+  "client_id": "C-001",
+  "first_name": "Yusuf",
+  "last_name": "Merriweather",
+  "age": 65,
+  "birth_year": 1961,
+  "state": "CO",
+  "occupation": "Registered nurse",
+  "annual_income": 114000,
+  "marital_status": "married",
+  "spouse_age": 70,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.85,
+  "social_security_estimate_annual": 36200,
+  "debts": {
+   "mortgage_balance": 54000,
+   "other_debt": 32000
+  },
+  "emergency_fund": 15300,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.casey",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "TL-721207",
+    "type": "Term Life",
+    "term_years": 20,
+    "issue_year": 2022,
+    "insured": "client",
+    "death_benefit": 500000,
+    "annual_premium": 1418,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****9209",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 585800,
+    "annual_contribution": 7300,
+    "employer_match_annual": 3400,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****2691",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 134000,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****6887",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 374300,
+    "annual_contribution": 6000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-002",
+  "first_name": "Nolan",
+  "last_name": "Dunmore",
+  "age": 33,
+  "birth_year": 1993,
+  "state": "MI",
+  "occupation": "Marketing manager",
+  "annual_income": 139000,
+  "marital_status": "widowed",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 4
+   },
+   {
+    "relationship": "child",
+    "age": 8
+   }
+  ],
+  "target_retirement_age": 62,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 43500,
+  "debts": {
+   "mortgage_balance": 420000,
+   "other_debt": 8000
+  },
+  "emergency_fund": 27100,
+  "risk_tolerance": "conservative",
+  "assigned_rep": "rep.jordan",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "WL-616007",
+    "type": "Whole Life",
+    "issue_year": 2005,
+    "insured": "client",
+    "death_benefit": 500000,
+    "cash_value": 53632,
+    "annual_premium": 4608,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-556038",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 139000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****4761",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 161100,
+    "annual_contribution": 12000,
+    "employer_match_annual": 5600,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****5469",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 5900,
+    "annual_contribution": 6500,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****5297",
+    "type": "Brokerage",
+    "owner": "client",
+    "balance": 289100,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-003",
+  "first_name": "Felix",
+  "last_name": "Fairbanks",
+  "age": 45,
+  "birth_year": 1981,
+  "state": "IA",
+  "occupation": "Electrician",
+  "annual_income": 86000,
+  "marital_status": "widowed",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 62,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 20300,
+  "debts": {
+   "mortgage_balance": 180000,
+   "other_debt": 15000
+  },
+  "emergency_fund": 19100,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.casey",
+  "notes": "Recently changed employers.",
+  "policies": [
+   {
+    "policy_id": "TL-669744",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2017,
+    "insured": "client",
+    "death_benefit": 1000000,
+    "annual_premium": 1383,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-742801",
+    "type": "Whole Life",
+    "issue_year": 2021,
+    "insured": "client",
+    "death_benefit": 250000,
+    "cash_value": 53775,
+    "annual_premium": 5345,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****8528",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 139100,
+    "annual_contribution": 6000,
+    "employer_match_annual": 2600,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-004",
+  "first_name": "Jasper",
+  "last_name": "Kestrel",
+  "age": 32,
+  "birth_year": 1994,
+  "state": "TX",
+  "occupation": "Civil engineer",
+  "annual_income": 139000,
+  "marital_status": "widowed",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 62,
+  "desired_retirement_income_pct": 0.85,
+  "social_security_estimate_annual": 32300,
+  "debts": {
+   "mortgage_balance": 180000,
+   "other_debt": 15000
+  },
+  "emergency_fund": 50000,
+  "risk_tolerance": "conservative",
+  "assigned_rep": "rep.jordan",
+  "notes": "Prefers email summaries.",
+  "policies": [],
+  "accounts": [
+   {
+    "account_id": "****6714",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 257800,
+    "annual_contribution": 18600,
+    "employer_match_annual": 7000,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-005",
+  "first_name": "Quinn",
+  "last_name": "Ivers",
+  "age": 51,
+  "birth_year": 1975,
+  "state": "IA",
+  "occupation": "Police officer",
+  "annual_income": 96000,
+  "marital_status": "married",
+  "spouse_age": 49,
+  "spouse_income": 42000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 14
+   },
+   {
+    "relationship": "child",
+    "age": 17
+   },
+   {
+    "relationship": "child",
+    "age": 10
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 24000,
+  "debts": {
+   "mortgage_balance": 340000,
+   "other_debt": 0
+  },
+  "emergency_fund": 17100,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.casey",
+  "notes": "Wants to review beneficiaries.",
+  "policies": [
+   {
+    "policy_id": "TL-853700",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2015,
+    "insured": "client",
+    "death_benefit": 500000,
+    "annual_premium": 500,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-559226",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 192000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   },
+   {
+    "policy_id": "DI-585709",
+    "type": "Disability Income",
+    "monthly_benefit": 4800,
+    "benefit_period": "to age 65",
+    "annual_premium": 2296,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****6290",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 412500,
+    "annual_contribution": 7500,
+    "employer_match_annual": 3800,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****1098",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 227000,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-006",
+  "first_name": "Silas",
+  "last_name": "Galloway",
+  "age": 39,
+  "birth_year": 1987,
+  "state": "IN",
+  "occupation": "Physician",
+  "annual_income": 248000,
+  "marital_status": "married",
+  "spouse_age": 43,
+  "spouse_income": 50000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 15
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.85,
+  "social_security_estimate_annual": 49300,
+  "debts": {
+   "mortgage_balance": 340000,
+   "other_debt": 15000
+  },
+  "emergency_fund": 60800,
+  "risk_tolerance": "growth",
+  "assigned_rep": "rep.jordan",
+  "notes": "Prefers email summaries.",
+  "policies": [
+   {
+    "policy_id": "TL-557205",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2014,
+    "insured": "client",
+    "death_benefit": 250000,
+    "annual_premium": 1335,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-287843",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 248000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****6434",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 428000,
+    "annual_contribution": 22800,
+    "employer_match_annual": 7400,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-007",
+  "first_name": "Marisol",
+  "last_name": "Thistlewood",
+  "age": 46,
+  "birth_year": 1980,
+  "state": "WI",
+  "occupation": "Civil engineer",
+  "annual_income": 142000,
+  "marital_status": "married",
+  "spouse_age": 44,
+  "spouse_income": 38000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 12
+   },
+   {
+    "relationship": "child",
+    "age": 9
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 32400,
+  "debts": {
+   "mortgage_balance": 318000,
+   "other_debt": 14500
+  },
+  "emergency_fund": 21000,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.jordan",
+  "notes": "Primary earner; spouse works part-time. Asked about college funding for both kids.",
+  "policies": [
+   {
+    "policy_id": "TL-470215",
+    "type": "Term Life",
+    "term_years": 20,
+    "issue_year": 2016,
+    "insured": "client",
+    "death_benefit": 250000,
+    "annual_premium": 410,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-883104",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 284000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****4821",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 212000,
+    "annual_contribution": 14200,
+    "employer_match_annual": 5680,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****1937",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 38500,
+    "annual_contribution": 3000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.85,
+     "bonds": 0.1,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****6650",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 22000,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   },
+   {
+    "account_id": "****3092",
+    "type": "529 College Savings",
+    "owner": "client",
+    "balance": 18400,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.5,
+     "bonds": 0.45,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-008",
+  "first_name": "Ulric",
+  "last_name": "Quillfeather",
+  "age": 69,
+  "birth_year": 1957,
+  "state": "AZ",
+  "occupation": "Retired civil engineer",
+  "annual_income": 0,
+  "marital_status": "married",
+  "spouse_age": 70,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 40300,
+  "debts": {
+   "mortgage_balance": 54000,
+   "other_debt": 8000
+  },
+  "emergency_fund": 52800,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.jordan",
+  "notes": "Prefers email summaries.",
+  "policies": [
+   {
+    "policy_id": "TL-986815",
+    "type": "Term Life",
+    "term_years": 10,
+    "issue_year": 2019,
+    "insured": "client",
+    "death_benefit": 500000,
+    "annual_premium": 304,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****8265",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 1154800,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****4629",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 143700,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-009",
+  "first_name": "Gianna",
+  "last_name": "Dunmore",
+  "age": 35,
+  "birth_year": 1991,
+  "state": "WI",
+  "occupation": "Accountant",
+  "annual_income": 82000,
+  "marital_status": "divorced",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 13
+   },
+   {
+    "relationship": "child",
+    "age": 13
+   }
+  ],
+  "target_retirement_age": 62,
+  "desired_retirement_income_pct": 0.7,
+  "social_security_estimate_annual": 21300,
+  "debts": {
+   "mortgage_balance": 180000,
+   "other_debt": 0
+  },
+  "emergency_fund": 22500,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.casey",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "TL-133630",
+    "type": "Term Life",
+    "term_years": 20,
+    "issue_year": 2012,
+    "insured": "client",
+    "death_benefit": 750000,
+    "annual_premium": 695,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-552650",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 82000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****8939",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 99100,
+    "annual_contribution": 6100,
+    "employer_match_annual": 4100,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****4656",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 156100,
+    "annual_contribution": 7000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****4532",
+    "type": "Brokerage",
+    "owner": "client",
+    "balance": 42800,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-010",
+  "first_name": "Camila",
+  "last_name": "Kestrel",
+  "age": 55,
+  "birth_year": 1971,
+  "state": "WI",
+  "occupation": "Physician",
+  "annual_income": 282000,
+  "marital_status": "married",
+  "spouse_age": 56,
+  "spouse_income": 62000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 18
+   }
+  ],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.7,
+  "social_security_estimate_annual": 42000,
+  "debts": {
+   "mortgage_balance": 260000,
+   "other_debt": 0
+  },
+  "emergency_fund": 117900,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.jordan",
+  "notes": "Interested in college funding.",
+  "policies": [
+   {
+    "policy_id": "TL-484010",
+    "type": "Term Life",
+    "term_years": 20,
+    "issue_year": 2021,
+    "insured": "client",
+    "death_benefit": 1000000,
+    "annual_premium": 562,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****6617",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 1175900,
+    "annual_contribution": 25300,
+    "employer_match_annual": 8500,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****2698",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 192400,
+    "annual_contribution": 7000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****8278",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 295300,
+    "annual_contribution": 6000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   },
+   {
+    "account_id": "****5695",
+    "type": "529 College Savings",
+    "owner": "client",
+    "balance": 34100,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.5,
+     "bonds": 0.45,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-011",
+  "first_name": "Hector",
+  "last_name": "Kestrel",
+  "age": 42,
+  "birth_year": 1984,
+  "state": "NC",
+  "occupation": "Civil engineer",
+  "annual_income": 101000,
+  "marital_status": "married",
+  "spouse_age": 39,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.85,
+  "social_security_estimate_annual": 32100,
+  "debts": {
+   "mortgage_balance": 420000,
+   "other_debt": 15000
+  },
+  "emergency_fund": 31100,
+  "risk_tolerance": "conservative",
+  "assigned_rep": "rep.casey",
+  "notes": "Prefers email summaries.",
+  "policies": [
+   {
+    "policy_id": "WL-552710",
+    "type": "Whole Life",
+    "issue_year": 2016,
+    "insured": "client",
+    "death_benefit": 500000,
+    "cash_value": 26192,
+    "annual_premium": 3315,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-579823",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 101000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****9580",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 250800,
+    "annual_contribution": 12300,
+    "employer_match_annual": 3000,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****8419",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 156400,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-012",
+  "first_name": "Vera",
+  "last_name": "Pemberton",
+  "age": 54,
+  "birth_year": 1972,
+  "state": "MO",
+  "occupation": "Physical therapist",
+  "annual_income": 99000,
+  "marital_status": "married",
+  "spouse_age": 53,
+  "spouse_income": 0,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 1
+   },
+   {
+    "relationship": "child",
+    "age": 13
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 24000,
+  "debts": {
+   "mortgage_balance": 420000,
+   "other_debt": 15000
+  },
+  "emergency_fund": 19400,
+  "risk_tolerance": "growth",
+  "assigned_rep": "rep.jordan",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "TL-654619",
+    "type": "Term Life",
+    "term_years": 20,
+    "issue_year": 2014,
+    "insured": "client",
+    "death_benefit": 500000,
+    "annual_premium": 608,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-498887",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 99000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****4289",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 464000,
+    "annual_contribution": 10500,
+    "employer_match_annual": 4000,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-013",
+  "first_name": "Mara",
+  "last_name": "Pemberton",
+  "age": 47,
+  "birth_year": 1979,
+  "state": "MI",
+  "occupation": "Civil engineer",
+  "annual_income": 97000,
+  "marital_status": "married",
+  "spouse_age": 45,
+  "spouse_income": 52000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 10
+   },
+   {
+    "relationship": "child",
+    "age": 13
+   }
+  ],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 29900,
+  "debts": {
+   "mortgage_balance": 0,
+   "other_debt": 0
+  },
+  "emergency_fund": 10400,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.casey",
+  "notes": "Interested in college funding.",
+  "policies": [
+   {
+    "policy_id": "GL-381429",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 97000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****2191",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 472100,
+    "annual_contribution": 11500,
+    "employer_match_annual": 2900,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****1108",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 39300,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-014",
+  "first_name": "Pierce",
+  "last_name": "Ashworth",
+  "age": 54,
+  "birth_year": 1972,
+  "state": "MO",
+  "occupation": "Marketing manager",
+  "annual_income": 130000,
+  "marital_status": "married",
+  "spouse_age": 55,
+  "spouse_income": 71000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 5
+   },
+   {
+    "relationship": "child",
+    "age": 17
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 34600,
+  "debts": {
+   "mortgage_balance": 260000,
+   "other_debt": 0
+  },
+  "emergency_fund": 37700,
+  "risk_tolerance": "growth",
+  "assigned_rep": "rep.jordan",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "TL-694151",
+    "type": "Term Life",
+    "term_years": 10,
+    "issue_year": 2021,
+    "insured": "client",
+    "death_benefit": 250000,
+    "annual_premium": 1188,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-323568",
+    "type": "Whole Life",
+    "issue_year": 2018,
+    "insured": "client",
+    "death_benefit": 250000,
+    "cash_value": 71633,
+    "annual_premium": 3762,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****2827",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 590100,
+    "annual_contribution": 12100,
+    "employer_match_annual": 5200,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****5904",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 74800,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-015",
+  "first_name": "Talia",
+  "last_name": "Whitlock",
+  "age": 70,
+  "birth_year": 1956,
+  "state": "MN",
+  "occupation": "Retired police officer",
+  "annual_income": 0,
+  "marital_status": "married",
+  "spouse_age": 74,
+  "spouse_income": 40000,
+  "dependents": [],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.7,
+  "social_security_estimate_annual": 23400,
+  "debts": {
+   "mortgage_balance": 0,
+   "other_debt": 32000
+  },
+  "emergency_fund": 22800,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.casey",
+  "notes": "Caring for an aging parent.",
+  "policies": [
+   {
+    "policy_id": "WL-239597",
+    "type": "Whole Life",
+    "issue_year": 2015,
+    "insured": "client",
+    "death_benefit": 100000,
+    "cash_value": 83552,
+    "annual_premium": 4373,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****8693",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 555600,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-016",
+  "first_name": "Felix",
+  "last_name": "Hartwell",
+  "age": 31,
+  "birth_year": 1995,
+  "state": "MN",
+  "occupation": "Accountant",
+  "annual_income": 78000,
+  "marital_status": "married",
+  "spouse_age": 34,
+  "spouse_income": 57000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 9
+   },
+   {
+    "relationship": "child",
+    "age": 9
+   }
+  ],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.7,
+  "social_security_estimate_annual": 22800,
+  "debts": {
+   "mortgage_balance": 0,
+   "other_debt": 0
+  },
+  "emergency_fund": 11800,
+  "risk_tolerance": "conservative",
+  "assigned_rep": "rep.jordan",
+  "notes": "Caring for an aging parent.",
+  "policies": [
+   {
+    "policy_id": "GL-635361",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 156000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   },
+   {
+    "policy_id": "DI-122069",
+    "type": "Disability Income",
+    "monthly_benefit": 3900,
+    "benefit_period": "to age 65",
+    "annual_premium": 2521,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****7189",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 48000,
+    "annual_contribution": 5200,
+    "employer_match_annual": 2300,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****8479",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 293600,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   },
+   {
+    "account_id": "****3326",
+    "type": "529 College Savings",
+    "owner": "client",
+    "balance": 5000,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.5,
+     "bonds": 0.45,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-017",
+  "first_name": "Talia",
+  "last_name": "Calloway",
+  "age": 51,
+  "birth_year": 1975,
+  "state": "MN",
+  "occupation": "Electrician",
+  "annual_income": 80000,
+  "marital_status": "single",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.85,
+  "social_security_estimate_annual": 20400,
+  "debts": {
+   "mortgage_balance": 260000,
+   "other_debt": 8000
+  },
+  "emergency_fund": 19400,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.casey",
+  "notes": "Recently changed employers.",
+  "policies": [
+   {
+    "policy_id": "TL-740272",
+    "type": "Term Life",
+    "term_years": 10,
+    "issue_year": 2017,
+    "insured": "client",
+    "death_benefit": 1000000,
+    "annual_premium": 513,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-537042",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 160000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****8005",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 358400,
+    "annual_contribution": 7400,
+    "employer_match_annual": 2400,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****9090",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 225600,
+    "annual_contribution": 3000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****8001",
+    "type": "Brokerage",
+    "owner": "client",
+    "balance": 10400,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-018",
+  "first_name": "Isla",
+  "last_name": "Merriweather",
+  "age": 63,
+  "birth_year": 1963,
+  "state": "WI",
+  "occupation": "Sales director",
+  "annual_income": 178000,
+  "marital_status": "married",
+  "spouse_age": 63,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 52900,
+  "debts": {
+   "mortgage_balance": 126000,
+   "other_debt": 8000
+  },
+  "emergency_fund": 84200,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.jordan",
+  "notes": "Caring for an aging parent.",
+  "policies": [
+   {
+    "policy_id": "TL-547558",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2020,
+    "insured": "client",
+    "death_benefit": 750000,
+    "annual_premium": 762,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-942024",
+    "type": "Whole Life",
+    "issue_year": 2011,
+    "insured": "client",
+    "death_benefit": 100000,
+    "cash_value": 85595,
+    "annual_premium": 5991,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-274544",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 356000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****4874",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 1259100,
+    "annual_contribution": 21800,
+    "employer_match_annual": 7100,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****3932",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 127300,
+    "annual_contribution": 6500,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-019",
+  "first_name": "Lucan",
+  "last_name": "Oakhurst",
+  "age": 47,
+  "birth_year": 1979,
+  "state": "IN",
+  "occupation": "Pharmacist",
+  "annual_income": 116000,
+  "marital_status": "divorced",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 18
+   },
+   {
+    "relationship": "child",
+    "age": 17
+   }
+  ],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 29200,
+  "debts": {
+   "mortgage_balance": 420000,
+   "other_debt": 0
+  },
+  "emergency_fund": 16500,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.casey",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "TL-356216",
+    "type": "Term Life",
+    "term_years": 10,
+    "issue_year": 2008,
+    "insured": "client",
+    "death_benefit": 250000,
+    "annual_premium": 1022,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-893784",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 232000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****2282",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 704800,
+    "annual_contribution": 15000,
+    "employer_match_annual": 3500,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****4774",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 228200,
+    "annual_contribution": 3000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****6950",
+    "type": "529 College Savings",
+    "owner": "client",
+    "balance": 58400,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.5,
+     "bonds": 0.45,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-020",
+  "first_name": "Lucan",
+  "last_name": "Ashworth",
+  "age": 33,
+  "birth_year": 1993,
+  "state": "TX",
+  "occupation": "Software engineer",
+  "annual_income": 173000,
+  "marital_status": "married",
+  "spouse_age": 29,
+  "spouse_income": 46000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 11
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.7,
+  "social_security_estimate_annual": 39800,
+  "debts": {
+   "mortgage_balance": 420000,
+   "other_debt": 8000
+  },
+  "emergency_fund": 24000,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.jordan",
+  "notes": "Caring for an aging parent.",
+  "policies": [
+   {
+    "policy_id": "TL-160226",
+    "type": "Term Life",
+    "term_years": 10,
+    "issue_year": 2016,
+    "insured": "client",
+    "death_benefit": 1000000,
+    "annual_premium": 755,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-917548",
+    "type": "Whole Life",
+    "issue_year": 2022,
+    "insured": "client",
+    "death_benefit": 500000,
+    "cash_value": 55793,
+    "annual_premium": 5295,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****4611",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 188700,
+    "annual_contribution": 11500,
+    "employer_match_annual": 6900,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****7532",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 73400,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****7803",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 126500,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-021",
+  "first_name": "Desmond",
+  "last_name": "Pemberton",
+  "age": 55,
+  "birth_year": 1971,
+  "state": "AZ",
+  "occupation": "Electrician",
+  "annual_income": 90000,
+  "marital_status": "widowed",
+  "spouse_age": null,
+  "spouse_income": 0,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 9
+   },
+   {
+    "relationship": "child",
+    "age": 13
+   },
+   {
+    "relationship": "child",
+    "age": 12
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 23700,
+  "debts": {
+   "mortgage_balance": 180000,
+   "other_debt": 8000
+  },
+  "emergency_fund": 43600,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.casey",
+  "notes": "Wants to review beneficiaries.",
+  "policies": [
+   {
+    "policy_id": "TL-632056",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2012,
+    "insured": "client",
+    "death_benefit": 1000000,
+    "annual_premium": 799,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-677811",
+    "type": "Whole Life",
+    "issue_year": 2022,
+    "insured": "client",
+    "death_benefit": 250000,
+    "cash_value": 80509,
+    "annual_premium": 4679,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-561330",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 180000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   },
+   {
+    "policy_id": "DI-635304",
+    "type": "Disability Income",
+    "monthly_benefit": 4500,
+    "benefit_period": "to age 65",
+    "annual_premium": 1219,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****1011",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 217400,
+    "annual_contribution": 7100,
+    "employer_match_annual": 4500,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****4758",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 191700,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****7114",
+    "type": "529 College Savings",
+    "owner": "client",
+    "balance": 5200,
+    "annual_contribution": 2400,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.5,
+     "bonds": 0.45,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-022",
+  "first_name": "Wesley",
+  "last_name": "Brightwater",
+  "age": 35,
+  "birth_year": 1991,
+  "state": "CO",
+  "occupation": "Physical therapist",
+  "annual_income": 111000,
+  "marital_status": "married",
+  "spouse_age": 40,
+  "spouse_income": 60000,
+  "dependents": [],
+  "target_retirement_age": 62,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 25400,
+  "debts": {
+   "mortgage_balance": 340000,
+   "other_debt": 0
+  },
+  "emergency_fund": 39000,
+  "risk_tolerance": "aggressive",
+  "assigned_rep": "rep.jordan",
+  "notes": "Caring for an aging parent.",
+  "policies": [
+   {
+    "policy_id": "TL-874845",
+    "type": "Term Life",
+    "term_years": 10,
+    "issue_year": 2015,
+    "insured": "client",
+    "death_benefit": 750000,
+    "annual_premium": 620,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****3403",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 207100,
+    "annual_contribution": 9500,
+    "employer_match_annual": 3300,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****8825",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 196100,
+    "annual_contribution": 6500,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-023",
+  "first_name": "Xiomara",
+  "last_name": "Quillfeather",
+  "age": 38,
+  "birth_year": 1988,
+  "state": "CO",
+  "occupation": "High school teacher",
+  "annual_income": 64000,
+  "marital_status": "married",
+  "spouse_age": 36,
+  "spouse_income": 0,
+  "dependents": [],
+  "target_retirement_age": 67,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 14800,
+  "debts": {
+   "mortgage_balance": 260000,
+   "other_debt": 0
+  },
+  "emergency_fund": 4300,
+  "risk_tolerance": "moderate",
+  "assigned_rep": "rep.casey",
+  "notes": "Recently changed employers.",
+  "policies": [
+   {
+    "policy_id": "TL-412377",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2009,
+    "insured": "client",
+    "death_benefit": 1000000,
+    "annual_premium": 1156,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-195674",
+    "type": "Whole Life",
+    "issue_year": 2017,
+    "insured": "client",
+    "death_benefit": 500000,
+    "cash_value": 89929,
+    "annual_premium": 4618,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "GL-813880",
+    "type": "Group Life (employer)",
+    "insured": "client",
+    "death_benefit": 128000,
+    "portable": false,
+    "status": "in force",
+    "carrier": "Employer plan (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****1152",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 65900,
+    "annual_contribution": 4000,
+    "employer_match_annual": 3200,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****5169",
+    "type": "Traditional IRA",
+    "owner": "client",
+    "balance": 249500,
+    "annual_contribution": 3000,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-024",
+  "first_name": "Nolan",
+  "last_name": "Ashworth",
+  "age": 53,
+  "birth_year": 1973,
+  "state": "AZ",
+  "occupation": "Sales director",
+  "annual_income": 212000,
+  "marital_status": "married",
+  "spouse_age": 54,
+  "spouse_income": 76000,
+  "dependents": [],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.75,
+  "social_security_estimate_annual": 37900,
+  "debts": {
+   "mortgage_balance": 260000,
+   "other_debt": 0
+  },
+  "emergency_fund": 29300,
+  "risk_tolerance": "growth",
+  "assigned_rep": "rep.jordan",
+  "notes": "Considering early retirement.",
+  "policies": [
+   {
+    "policy_id": "TL-319155",
+    "type": "Term Life",
+    "term_years": 20,
+    "issue_year": 2012,
+    "insured": "client",
+    "death_benefit": 750000,
+    "annual_premium": 1196,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   },
+   {
+    "policy_id": "WL-780858",
+    "type": "Whole Life",
+    "issue_year": 2019,
+    "insured": "client",
+    "death_benefit": 250000,
+    "cash_value": 43297,
+    "annual_premium": 5113,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****7906",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 1387400,
+    "annual_contribution": 27900,
+    "employer_match_annual": 10600,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   }
+  ],
+  "synthetic": true
+ },
+ {
+  "client_id": "C-025",
+  "first_name": "Yusuf",
+  "last_name": "Whitlock",
+  "age": 44,
+  "birth_year": 1982,
+  "state": "IA",
+  "occupation": "Small business owner",
+  "annual_income": 162000,
+  "marital_status": "married",
+  "spouse_age": 41,
+  "spouse_income": 74000,
+  "dependents": [
+   {
+    "relationship": "child",
+    "age": 14
+   }
+  ],
+  "target_retirement_age": 65,
+  "desired_retirement_income_pct": 0.8,
+  "social_security_estimate_annual": 45800,
+  "debts": {
+   "mortgage_balance": 420000,
+   "other_debt": 0
+  },
+  "emergency_fund": 74500,
+  "risk_tolerance": "growth",
+  "assigned_rep": "rep.casey",
+  "notes": "Caring for an aging parent.",
+  "policies": [
+   {
+    "policy_id": "TL-681100",
+    "type": "Term Life",
+    "term_years": 30,
+    "issue_year": 2015,
+    "insured": "client",
+    "death_benefit": 250000,
+    "annual_premium": 349,
+    "status": "in force",
+    "carrier": "Lakeshore Mutual Life (fictional)"
+   }
+  ],
+  "accounts": [
+   {
+    "account_id": "****5856",
+    "type": "401(k)",
+    "owner": "client",
+    "balance": 228800,
+    "annual_contribution": 10800,
+    "employer_match_annual": 8100,
+    "allocation": {
+     "stocks": 0.7,
+     "bonds": 0.25,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****5807",
+    "type": "Roth IRA",
+    "owner": "client",
+    "balance": 185000,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.8,
+     "bonds": 0.15,
+     "cash": 0.05
+    }
+   },
+   {
+    "account_id": "****8675",
+    "type": "Brokerage",
+    "owner": "joint",
+    "balance": 40500,
+    "annual_contribution": 0,
+    "employer_match_annual": 0,
+    "allocation": {
+     "stocks": 0.6,
+     "bonds": 0.3,
+     "cash": 0.1
+    }
+   }
+  ],
+  "synthetic": true
+ }
+]

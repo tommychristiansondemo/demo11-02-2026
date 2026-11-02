@@ -1,0 +1,14 @@
+opentelemetry/instrumentation/remoulade/__init__.py,sha256=bJQ5F7d-4TYkPzJC16VX9E0MSUXhJoSQE5OllN_HeIw,5355
+opentelemetry/instrumentation/remoulade/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/remoulade/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/remoulade/__pycache__/utils.cpython-312.pyc,,
+opentelemetry/instrumentation/remoulade/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/remoulade/package.py,sha256=IVwgGJ3UmciK16mFy-TrhNKCR4gSYHmbH-TFs0RKM5g,115
+opentelemetry/instrumentation/remoulade/utils.py,sha256=Qwa686Medie2swDroc-KMzyevsx7HzvVGaxwRx1otPE,820
+opentelemetry/instrumentation/remoulade/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_remoulade-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_remoulade-0.66b1.dist-info/METADATA,sha256=_3doyR9LGkyPaiKBnv2tFGu3WoGu1YpltZfzF1tN2i8,2057
+opentelemetry_instrumentation_remoulade-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_remoulade-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_remoulade-0.66b1.dist-info/entry_points.txt,sha256=wbCyzfE4dgnDC5t4Wu4PWFTjeeSGosSj2OcWO9Fk0Og,103
+opentelemetry_instrumentation_remoulade-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

@@ -1,0 +1,15 @@
+opentelemetry/instrumentation/pymongo/__init__.py,sha256=R_LNQKEVQMAI0HxAuE5_BG8iwmg4iM7D2wsZ20uddhk,12307
+opentelemetry/instrumentation/pymongo/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/pymongo/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/pymongo/__pycache__/utils.cpython-312.pyc,,
+opentelemetry/instrumentation/pymongo/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/pymongo/package.py,sha256=mIvlttV3D5Mr5ouGkZbwBAgL4IPHRWukI83NlwvGLrA,151
+opentelemetry/instrumentation/pymongo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opentelemetry/instrumentation/pymongo/utils.py,sha256=xpz6_W8TTYD449HR3bHPudTE1LK3lj2XnylEfOqnrYA,269
+opentelemetry/instrumentation/pymongo/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_pymongo-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_pymongo-0.66b1.dist-info/METADATA,sha256=0vJLZEmcWjmOTKpQmFKQzGKi4t_ZViY2z3ozX1vil7g,1969
+opentelemetry_instrumentation_pymongo-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_pymongo-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_pymongo-0.66b1.dist-info/entry_points.txt,sha256=Mmeac61VKfSV57qEdRawVJuw5RwSNinXyFvvi7w-UqE,97
+opentelemetry_instrumentation_pymongo-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

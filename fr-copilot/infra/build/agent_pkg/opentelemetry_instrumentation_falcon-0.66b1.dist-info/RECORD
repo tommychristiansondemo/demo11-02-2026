@@ -1,0 +1,12 @@
+opentelemetry/instrumentation/falcon/__init__.py,sha256=ewEHQRne6jIAwS2BXZoaHpa2pO9ldSIkhCl8wTTG-Ic,21202
+opentelemetry/instrumentation/falcon/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/falcon/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/falcon/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/falcon/package.py,sha256=kHMyzyLqKw2LtdVH6G2dw_AaMug4QuydiKsDIUuVOT0,180
+opentelemetry/instrumentation/falcon/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_falcon-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_falcon-0.66b1.dist-info/METADATA,sha256=mBhyAqiRuJaJvd0y-d8y9hOYiUeP33dK3cEXKkw1XpE,4217
+opentelemetry_instrumentation_falcon-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_falcon-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_falcon-0.66b1.dist-info/entry_points.txt,sha256=midt5pjuS9uEnBWjCKiNnlvALEM2A7jliXpuQ_VVKhM,94
+opentelemetry_instrumentation_falcon-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

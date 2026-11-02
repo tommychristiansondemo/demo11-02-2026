@@ -1,0 +1,1253 @@
+# Change Log
+
+## 4.6.2
+
+### Patch Changes
+
+- 99c3f91: Restore npm provenance attestations. No functional changes.
+- Updated dependencies [99c3f91]
+  - @smithy/core@3.33.2
+  - @smithy/types@4.17.2
+
+## 4.6.1
+
+### Patch Changes
+
+- d774f8d: chore: build packages with typescript 7. Packages continue to be compatible with TypeScript 3.4 through 7.0 in consumer applications.
+- 3530774: bump fflate to 0.8.3 to address CVE-2026-45820
+- Updated dependencies [b3958ad]
+- Updated dependencies [d774f8d]
+  - @smithy/core@3.33.1
+  - @smithy/types@4.17.1
+
+## 4.6.0
+
+### Minor Changes
+
+- ec9b4b2: chore: update builds to use typescript 6. This should not affect consumers, who may continue to use TypeScript 3.4 through 7.0 as of this version.
+
+### Patch Changes
+
+- Updated dependencies [ec9b4b2]
+  - @smithy/types@4.17.0
+  - @smithy/core@3.32.0
+
+## 4.5.16
+
+### Patch Changes
+
+- Updated dependencies [fcf1366]
+  - @smithy/core@3.31.1
+
+## 4.5.15
+
+### Patch Changes
+
+- Updated dependencies [a14bb71]
+  - @smithy/core@3.31.0
+
+## 4.5.14
+
+### Patch Changes
+
+- Updated dependencies [54040ef]
+- Updated dependencies [155bb56]
+  - @smithy/core@3.30.0
+
+## 4.5.13
+
+### Patch Changes
+
+- Updated dependencies [d6e6f8b]
+  - @smithy/core@3.29.8
+
+## 4.5.12
+
+### Patch Changes
+
+- Updated dependencies [44b21e6]
+  - @smithy/core@3.29.7
+
+## 4.5.11
+
+### Patch Changes
+
+- Updated dependencies [3248fbd]
+  - @smithy/core@3.29.6
+
+## 4.5.10
+
+### Patch Changes
+
+- Updated dependencies [b44cb0a]
+  - @smithy/core@3.29.5
+
+## 4.5.9
+
+### Patch Changes
+
+- Updated dependencies [5fca3a0]
+  - @smithy/core@3.29.4
+
+## 4.5.8
+
+### Patch Changes
+
+- Updated dependencies [a97abc3]
+  - @smithy/types@4.16.1
+  - @smithy/core@3.29.3
+
+## 4.5.7
+
+### Patch Changes
+
+- 273e480: types updates for isolatedModules=true
+- Updated dependencies [273e480]
+- Updated dependencies [74b3d45]
+  - @smithy/types@4.16.0
+  - @smithy/core@3.29.2
+
+## 4.5.6
+
+### Patch Changes
+
+- Updated dependencies [1fac409]
+  - @smithy/core@3.29.1
+
+## 4.5.5
+
+### Patch Changes
+
+- Updated dependencies [12bceb2]
+- Updated dependencies [4395dad]
+  - @smithy/core@3.29.0
+  - @smithy/types@4.15.1
+
+## 4.5.4
+
+### Patch Changes
+
+- Updated dependencies [d366537]
+- Updated dependencies [c0d7f5d]
+  - @smithy/core@3.28.0
+
+## 4.5.3
+
+### Patch Changes
+
+- Updated dependencies [c9575e1]
+- Updated dependencies [2dcefdb]
+- Updated dependencies [91280a5]
+  - @smithy/core@3.27.0
+
+## 4.5.2
+
+### Patch Changes
+
+- Updated dependencies [3cfda3b]
+  - @smithy/core@3.26.0
+
+## 4.5.1
+
+### Patch Changes
+
+- Updated dependencies [63ddca4]
+  - @smithy/core@3.25.1
+
+## 4.5.0
+
+### Minor Changes
+
+- 17e50e9: update dist-cjs output format to use plain require/exports statements
+
+### Patch Changes
+
+- Updated dependencies [17e50e9]
+  - @smithy/types@4.15.0
+  - @smithy/core@3.25.0
+
+## 4.4.7
+
+### Patch Changes
+
+- 1e5bdd3: Update author URL in package.json to be more specific
+- bcbadbc: package json updates
+- Updated dependencies [1e5bdd3]
+- Updated dependencies [13e74d6]
+- Updated dependencies [3bc3322]
+- Updated dependencies [bcbadbc]
+  - @smithy/core@3.24.7
+  - @smithy/types@4.14.4
+
+## 4.4.6
+
+### Patch Changes
+
+- Updated dependencies [776bc52]
+- Updated dependencies [5b92a54]
+  - @smithy/types@4.14.3
+  - @smithy/core@3.24.6
+
+## 4.4.5
+
+### Patch Changes
+
+- Updated dependencies [721fbed]
+  - @smithy/core@3.24.5
+
+## 4.4.4
+
+### Patch Changes
+
+- Updated dependencies [9eaa5c6]
+  - @smithy/core@3.24.4
+
+## 4.4.3
+
+### Patch Changes
+
+- Updated dependencies [cf00244]
+  - @smithy/types@4.14.2
+  - @smithy/core@3.24.3
+
+## 4.4.2
+
+### Patch Changes
+
+- Updated dependencies [6d4eb8a]
+  - @smithy/core@3.24.2
+
+## 4.4.1
+
+### Patch Changes
+
+- Updated dependencies [2dc5cf6]
+- Updated dependencies [1d0ff86]
+  - @smithy/core@3.24.1
+
+## 4.4.0
+
+### Minor Changes
+
+- 4f30af1: consolidation for core/protocols
+- 8963b91: consolidate packages into core/serde
+- 62fed78: package consolidation for core/config
+- f21bf6b: consolidate packages into core/client
+
+### Patch Changes
+
+- Updated dependencies [ee92b6b]
+- Updated dependencies [540aeb4]
+- Updated dependencies [0be0b36]
+- Updated dependencies [4f30af1]
+- Updated dependencies [8963b91]
+- Updated dependencies [fb323fb]
+- Updated dependencies [9194e9f]
+- Updated dependencies [7ec62a0]
+- Updated dependencies [62fed78]
+- Updated dependencies [cad44fc]
+- Updated dependencies [545589a]
+- Updated dependencies [f21bf6b]
+- Updated dependencies [7fd6ac0]
+  - @smithy/core@3.24.0
+
+## 4.3.46
+
+### Patch Changes
+
+- @smithy/core@3.23.17
+
+## 4.3.45
+
+### Patch Changes
+
+- Updated dependencies [a029f0e]
+  - @smithy/core@3.23.16
+
+## 4.3.44
+
+### Patch Changes
+
+- Updated dependencies [131fce4]
+- Updated dependencies [52b4789]
+  - @smithy/types@4.14.1
+  - @smithy/core@3.23.15
+  - @smithy/node-config-provider@4.3.14
+  - @smithy/protocol-http@5.3.14
+  - @smithy/util-middleware@4.2.14
+
+## 4.3.43
+
+### Patch Changes
+
+- Updated dependencies [cffd868]
+  - @smithy/types@4.14.0
+  - @smithy/core@3.23.14
+  - @smithy/node-config-provider@4.3.13
+  - @smithy/protocol-http@5.3.13
+  - @smithy/util-middleware@4.2.13
+
+## 4.3.42
+
+### Patch Changes
+
+- Updated dependencies [7198e09]
+  - @smithy/core@3.23.13
+
+## 4.3.41
+
+### Patch Changes
+
+- @smithy/core@3.23.12
+
+## 4.3.40
+
+### Patch Changes
+
+- Updated dependencies [2edd638]
+  - @smithy/core@3.23.11
+
+## 4.3.39
+
+### Patch Changes
+
+- Updated dependencies [5340b11]
+  - @smithy/core@3.23.10
+  - @smithy/types@4.13.1
+  - @smithy/node-config-provider@4.3.12
+  - @smithy/protocol-http@5.3.12
+  - @smithy/util-middleware@4.2.12
+
+## 4.3.38
+
+### Patch Changes
+
+- Updated dependencies [6ef5430]
+- Updated dependencies [6ef5430]
+  - @smithy/core@3.23.9
+
+## 4.3.37
+
+### Patch Changes
+
+- a4d95e6: Set downlevel types to be used in typescript@'<4.5'
+- Updated dependencies [a4d95e6]
+  - @smithy/node-config-provider@4.3.11
+  - @smithy/util-config-provider@4.2.2
+  - @smithy/is-array-buffer@4.2.2
+  - @smithy/util-middleware@4.2.11
+  - @smithy/protocol-http@5.3.11
+  - @smithy/util-utf8@4.2.2
+  - @smithy/core@3.23.8
+
+## 4.3.36
+
+### Patch Changes
+
+- Updated dependencies [11569eb]
+  - @smithy/core@3.23.7
+
+## 4.3.35
+
+### Patch Changes
+
+- Updated dependencies [d0954cc]
+  - @smithy/types@4.13.0
+  - @smithy/core@3.23.6
+  - @smithy/node-config-provider@4.3.10
+  - @smithy/protocol-http@5.3.10
+  - @smithy/util-middleware@4.2.10
+
+## 4.3.34
+
+### Patch Changes
+
+- Updated dependencies [026b177]
+- Updated dependencies [cde9f09]
+  - @smithy/core@3.23.5
+
+## 4.3.33
+
+### Patch Changes
+
+- 03c3dc8: update for rollup build externalLiveBindings=false
+- Updated dependencies [03c3dc8]
+  - @smithy/core@3.23.4
+  - @smithy/is-array-buffer@4.2.1
+  - @smithy/node-config-provider@4.3.9
+  - @smithy/protocol-http@5.3.9
+  - @smithy/types@4.12.1
+  - @smithy/util-config-provider@4.2.1
+  - @smithy/util-middleware@4.2.9
+  - @smithy/util-utf8@4.2.1
+
+## 4.3.32
+
+### Patch Changes
+
+- @smithy/core@3.23.3
+
+## 4.3.31
+
+### Patch Changes
+
+- Updated dependencies [c5db01c]
+  - @smithy/core@3.23.2
+
+## 4.3.30
+
+### Patch Changes
+
+- Updated dependencies [6f96c01]
+  - @smithy/core@3.23.1
+
+## 4.3.29
+
+### Patch Changes
+
+- Updated dependencies [4f05c6a]
+  - @smithy/core@3.23.0
+
+## 4.3.28
+
+### Patch Changes
+
+- @smithy/core@3.22.1
+
+## 4.3.27
+
+### Patch Changes
+
+- Updated dependencies [472bf01]
+  - @smithy/core@3.22.0
+
+## 4.3.26
+
+### Patch Changes
+
+- Updated dependencies [fa0e0c4]
+  - @smithy/core@3.21.1
+
+## 4.3.25
+
+### Patch Changes
+
+- Updated dependencies [c2a6f46]
+  - @smithy/core@3.21.0
+
+## 4.3.24
+
+### Patch Changes
+
+- Updated dependencies [96cc077]
+  - @smithy/core@3.20.8
+
+## 4.3.23
+
+### Patch Changes
+
+- Updated dependencies [ae6ef2e]
+  - @smithy/core@3.20.7
+
+## 4.3.22
+
+### Patch Changes
+
+- Updated dependencies [862c942]
+  - @smithy/core@3.20.6
+
+## 4.3.21
+
+### Patch Changes
+
+- Updated dependencies [745867a]
+  - @smithy/types@4.12.0
+  - @smithy/core@3.20.5
+  - @smithy/node-config-provider@4.3.8
+  - @smithy/protocol-http@5.3.8
+  - @smithy/util-middleware@4.2.8
+
+## 4.3.20
+
+### Patch Changes
+
+- @smithy/core@3.20.4
+
+## 4.3.19
+
+### Patch Changes
+
+- Updated dependencies [681d6c4]
+  - @smithy/core@3.20.3
+
+## 4.3.18
+
+### Patch Changes
+
+- Updated dependencies [dd55f1f]
+  - @smithy/core@3.20.2
+
+## 4.3.17
+
+### Patch Changes
+
+- Updated dependencies [aa954bc]
+  - @smithy/core@3.20.1
+
+## 4.3.16
+
+### Patch Changes
+
+- Updated dependencies [9ccb841]
+  - @smithy/types@4.11.0
+  - @smithy/core@3.20.0
+  - @smithy/node-config-provider@4.3.7
+  - @smithy/protocol-http@5.3.7
+  - @smithy/util-middleware@4.2.7
+
+## 4.3.15
+
+### Patch Changes
+
+- Updated dependencies [5a56762]
+  - @smithy/types@4.10.0
+  - @smithy/core@3.19.0
+  - @smithy/node-config-provider@4.3.6
+  - @smithy/protocol-http@5.3.6
+  - @smithy/util-middleware@4.2.6
+
+## 4.3.14
+
+### Patch Changes
+
+- Updated dependencies [541a18f]
+  - @smithy/core@3.18.7
+
+## 4.3.13
+
+### Patch Changes
+
+- Updated dependencies [1d6db03]
+  - @smithy/core@3.18.6
+
+## 4.3.12
+
+### Patch Changes
+
+- Updated dependencies [77c149f]
+  - @smithy/core@3.18.5
+
+## 4.3.11
+
+### Patch Changes
+
+- Updated dependencies [e659a06]
+  - @smithy/core@3.18.4
+
+## 4.3.10
+
+### Patch Changes
+
+- Updated dependencies [5bcd041]
+  - @smithy/core@3.18.3
+
+## 4.3.9
+
+### Patch Changes
+
+- Updated dependencies [c8b148c]
+  - @smithy/core@3.18.2
+
+## 4.3.8
+
+### Patch Changes
+
+- Updated dependencies [0976f42]
+  - @smithy/core@3.18.1
+
+## 4.3.7
+
+### Patch Changes
+
+- Updated dependencies [3926fd7]
+- Updated dependencies [e77f705]
+  - @smithy/types@4.9.0
+  - @smithy/core@3.18.0
+  - @smithy/node-config-provider@4.3.5
+  - @smithy/protocol-http@5.3.5
+  - @smithy/util-middleware@4.2.5
+
+## 4.3.6
+
+### Patch Changes
+
+- Updated dependencies [6da0ab3]
+- Updated dependencies [df00095]
+  - @smithy/types@4.8.1
+  - @smithy/core@3.17.2
+  - @smithy/node-config-provider@4.3.4
+  - @smithy/protocol-http@5.3.4
+  - @smithy/util-middleware@4.2.4
+
+## 4.3.5
+
+### Patch Changes
+
+- @smithy/core@3.17.1
+
+## 4.3.4
+
+### Patch Changes
+
+- Updated dependencies [8a2a912]
+  - @smithy/types@4.8.0
+  - @smithy/core@3.17.0
+  - @smithy/node-config-provider@4.3.3
+  - @smithy/protocol-http@5.3.3
+  - @smithy/util-middleware@4.2.3
+
+## 4.3.3
+
+### Patch Changes
+
+- Updated dependencies [052d261]
+  - @smithy/core@3.16.1
+  - @smithy/types@4.7.1
+  - @smithy/node-config-provider@4.3.2
+  - @smithy/protocol-http@5.3.2
+  - @smithy/util-middleware@4.2.2
+
+## 4.3.2
+
+### Patch Changes
+
+- Updated dependencies [761d89c]
+- Updated dependencies [7f8af58]
+- Updated dependencies [8a2873c]
+  - @smithy/types@4.7.0
+  - @smithy/core@3.16.0
+  - @smithy/node-config-provider@4.3.1
+  - @smithy/protocol-http@5.3.1
+  - @smithy/util-middleware@4.2.1
+
+## 4.3.1
+
+### Patch Changes
+
+- Updated dependencies [813c9a5]
+  - @smithy/core@3.15.0
+
+## 4.3.0
+
+### Minor Changes
+
+- 45ee67f: update dist-cjs generation to use rollup
+
+### Patch Changes
+
+- Updated dependencies [45ee67f]
+  - @smithy/core@3.14.0
+  - @smithy/is-array-buffer@4.2.0
+  - @smithy/node-config-provider@4.3.0
+  - @smithy/protocol-http@5.3.0
+  - @smithy/types@4.6.0
+  - @smithy/util-config-provider@4.2.0
+  - @smithy/util-middleware@4.2.0
+  - @smithy/util-utf8@4.2.0
+
+## 4.2.5
+
+### Patch Changes
+
+- Updated dependencies [59e9952]
+  - @smithy/core@3.13.0
+
+## 4.2.4
+
+### Patch Changes
+
+- Updated dependencies [97fe0d8]
+- Updated dependencies [3eb73f3]
+  - @smithy/core@3.12.0
+
+## 4.2.3
+
+### Patch Changes
+
+- Updated dependencies [f8793be]
+  - @smithy/core@3.11.1
+
+## 4.2.2
+
+### Patch Changes
+
+- @smithy/node-config-provider@4.2.2
+
+## 4.2.1
+
+### Patch Changes
+
+- Updated dependencies [bb7c1c1]
+  - @smithy/types@4.5.0
+  - @smithy/core@3.11.0
+  - @smithy/node-config-provider@4.2.1
+  - @smithy/protocol-http@5.2.1
+  - @smithy/util-middleware@4.1.1
+
+## 4.2.0
+
+### Minor Changes
+
+- 64cda93: set sideEffects bundler metadata
+
+### Patch Changes
+
+- f884df7: enforce consistent-type-imports
+- Updated dependencies [64cda93]
+- Updated dependencies [f884df7]
+  - @smithy/node-config-provider@4.2.0
+  - @smithy/util-config-provider@4.1.0
+  - @smithy/is-array-buffer@4.1.0
+  - @smithy/util-middleware@4.1.0
+  - @smithy/protocol-http@5.2.0
+  - @smithy/util-utf8@4.1.0
+  - @smithy/types@4.4.0
+  - @smithy/core@3.10.0
+
+## 4.1.19
+
+### Patch Changes
+
+- Updated dependencies [06ac1f6]
+  - @smithy/core@3.9.2
+
+## 4.1.18
+
+### Patch Changes
+
+- Updated dependencies [29fad01]
+  - @smithy/core@3.9.1
+
+## 4.1.17
+
+### Patch Changes
+
+- Updated dependencies [ab4f33f]
+- Updated dependencies [d79dc91]
+  - @smithy/core@3.9.0
+
+## 4.1.16
+
+### Patch Changes
+
+- Updated dependencies [fd00602]
+- Updated dependencies [64e033f]
+  - @smithy/core@3.8.0
+  - @smithy/types@4.3.2
+  - @smithy/node-config-provider@4.1.4
+  - @smithy/protocol-http@5.1.3
+  - @smithy/util-middleware@4.0.5
+
+## 4.1.15
+
+### Patch Changes
+
+- Updated dependencies [f4dcba0]
+  - @smithy/core@3.7.2
+
+## 4.1.14
+
+### Patch Changes
+
+- Updated dependencies [312801c]
+- Updated dependencies [bb7975e]
+  - @smithy/core@3.7.1
+
+## 4.1.13
+
+### Patch Changes
+
+- Updated dependencies [d105c97]
+  - @smithy/core@3.7.0
+
+## 4.1.12
+
+### Patch Changes
+
+- Updated dependencies [10a0534]
+  - @smithy/core@3.6.0
+
+## 4.1.11
+
+### Patch Changes
+
+- Updated dependencies [4a31774]
+  - @smithy/core@3.5.3
+
+## 4.1.10
+
+### Patch Changes
+
+- Updated dependencies [4642e7e]
+- Updated dependencies [147ceed]
+- Updated dependencies [ae8f1f4]
+  - @smithy/core@3.5.2
+
+## 4.1.9
+
+### Patch Changes
+
+- Updated dependencies [358c1ff]
+  - @smithy/types@4.3.1
+  - @smithy/core@3.5.1
+  - @smithy/node-config-provider@4.1.3
+  - @smithy/protocol-http@5.1.2
+  - @smithy/util-middleware@4.0.4
+
+## 4.1.8
+
+### Patch Changes
+
+- Updated dependencies [ae11e3a]
+- Updated dependencies [23812a9]
+  - @smithy/core@3.5.0
+
+## 4.1.7
+
+### Patch Changes
+
+- Updated dependencies [0547fab]
+- Updated dependencies [efb27ee]
+- Updated dependencies [06b0ce8]
+  - @smithy/types@4.3.0
+  - @smithy/core@3.4.0
+  - @smithy/node-config-provider@4.1.2
+  - @smithy/protocol-http@5.1.1
+  - @smithy/util-middleware@4.0.3
+
+## 4.1.6
+
+### Patch Changes
+
+- @smithy/core@3.3.3
+
+## 4.1.5
+
+### Patch Changes
+
+- @smithy/core@3.3.2
+
+## 4.1.4
+
+### Patch Changes
+
+- Updated dependencies [9f8d075]
+  - @smithy/node-config-provider@4.1.1
+
+## 4.1.3
+
+### Patch Changes
+
+- Updated dependencies [acefcf5]
+- Updated dependencies [9ff783b]
+  - @smithy/node-config-provider@4.1.0
+
+## 4.1.2
+
+### Patch Changes
+
+- Updated dependencies [40ffcd5]
+  - @smithy/core@3.3.1
+
+## 4.1.1
+
+### Patch Changes
+
+- Updated dependencies [5896264]
+  - @smithy/core@3.3.0
+
+## 4.1.0
+
+### Minor Changes
+
+- e917e61: enforce singular config object during client instantiation
+
+### Patch Changes
+
+- Updated dependencies [02ef79c]
+- Updated dependencies [e917e61]
+  - @smithy/core@3.2.0
+  - @smithy/protocol-http@5.1.0
+  - @smithy/types@4.2.0
+  - @smithy/node-config-provider@4.0.2
+  - @smithy/util-middleware@4.0.2
+
+## 4.0.6
+
+### Patch Changes
+
+- @smithy/core@3.1.5
+
+## 4.0.5
+
+### Patch Changes
+
+- @smithy/core@3.1.4
+
+## 4.0.4
+
+### Patch Changes
+
+- @smithy/core@3.1.3
+
+## 4.0.3
+
+### Patch Changes
+
+- @smithy/core@3.1.2
+
+## 4.0.2
+
+### Patch Changes
+
+- @smithy/core@3.1.1
+
+## 4.0.1
+
+### Patch Changes
+
+- Updated dependencies [2aff9df]
+- Updated dependencies [000b2ae]
+  - @smithy/types@4.1.0
+  - @smithy/core@3.1.0
+  - @smithy/node-config-provider@4.0.1
+  - @smithy/protocol-http@5.0.1
+  - @smithy/util-middleware@4.0.1
+
+## 4.0.0
+
+### Major Changes
+
+- 20d99be: major version bump for dropping node16 support
+
+### Patch Changes
+
+- Updated dependencies [20d99be]
+  - @smithy/node-config-provider@4.0.0
+  - @smithy/util-config-provider@4.0.0
+  - @smithy/util-middleware@4.0.0
+  - @smithy/util-utf8@4.0.0
+  - @smithy/core@3.0.0
+  - @smithy/is-array-buffer@4.0.0
+  - @smithy/protocol-http@5.0.0
+  - @smithy/types@4.0.0
+
+## 3.1.7
+
+### Patch Changes
+
+- @smithy/core@2.5.7
+
+## 3.1.6
+
+### Patch Changes
+
+- @smithy/core@2.5.6
+
+## 3.1.5
+
+### Patch Changes
+
+- Updated dependencies [b52b4e8]
+  - @smithy/types@3.7.2
+  - @smithy/core@2.5.5
+  - @smithy/node-config-provider@3.1.12
+  - @smithy/protocol-http@4.1.8
+  - @smithy/util-middleware@3.0.11
+
+## 3.1.4
+
+### Patch Changes
+
+- Updated dependencies [9c40f7b]
+  - @smithy/core@2.5.4
+
+## 3.1.3
+
+### Patch Changes
+
+- Updated dependencies [fcd5ca8]
+  - @smithy/types@3.7.1
+  - @smithy/core@2.5.3
+  - @smithy/node-config-provider@3.1.11
+  - @smithy/protocol-http@4.1.7
+  - @smithy/util-middleware@3.0.10
+
+## 3.1.2
+
+### Patch Changes
+
+- Updated dependencies [c6ef519]
+- Updated dependencies [cd1929b]
+  - @smithy/core@2.5.2
+  - @smithy/types@3.7.0
+  - @smithy/node-config-provider@3.1.10
+  - @smithy/protocol-http@4.1.6
+  - @smithy/util-middleware@3.0.9
+
+## 3.1.1
+
+### Patch Changes
+
+- @smithy/core@2.5.1
+
+## 3.1.0
+
+### Minor Changes
+
+- d07b0ab: feature detection for custom endpoint and gzip
+
+### Patch Changes
+
+- d07b0ab: reorganize smithy/core to be upstream of smithy/smithy-client
+- Updated dependencies [84bec05]
+- Updated dependencies [d07b0ab]
+- Updated dependencies [d07b0ab]
+  - @smithy/types@3.6.0
+  - @smithy/core@2.5.0
+  - @smithy/node-config-provider@3.1.9
+  - @smithy/protocol-http@4.1.5
+  - @smithy/util-middleware@3.0.8
+
+## 3.0.12
+
+### Patch Changes
+
+- 75e0125: comma spacing
+
+## 3.0.11
+
+### Patch Changes
+
+- dfb0664: use lowercase headers
+- Updated dependencies [a4c1285]
+  - @smithy/types@3.5.0
+  - @smithy/node-config-provider@3.1.8
+  - @smithy/protocol-http@4.1.4
+  - @smithy/util-middleware@3.0.7
+
+## 3.0.10
+
+### Patch Changes
+
+- Updated dependencies [e7b438b]
+  - @smithy/types@3.4.2
+  - @smithy/node-config-provider@3.1.7
+  - @smithy/protocol-http@4.1.3
+  - @smithy/util-middleware@3.0.6
+
+## 3.0.9
+
+### Patch Changes
+
+- Updated dependencies [cf9257e]
+  - @smithy/types@3.4.1
+  - @smithy/node-config-provider@3.1.6
+  - @smithy/protocol-http@4.1.2
+  - @smithy/util-middleware@3.0.5
+
+## 3.0.8
+
+### Patch Changes
+
+- Updated dependencies [2dad138]
+- Updated dependencies [9f3f2f5]
+  - @smithy/types@3.4.0
+  - @smithy/node-config-provider@3.1.5
+  - @smithy/protocol-http@4.1.1
+  - @smithy/util-middleware@3.0.4
+
+## 3.0.7
+
+### Patch Changes
+
+- Updated dependencies [86862ea]
+  - @smithy/protocol-http@4.1.0
+
+## 3.0.6
+
+### Patch Changes
+
+- Updated dependencies [796567d]
+  - @smithy/protocol-http@4.0.4
+
+## 3.0.5
+
+### Patch Changes
+
+- @smithy/node-config-provider@3.1.4
+
+## 3.0.4
+
+### Patch Changes
+
+- Updated dependencies [4784fb9]
+  - @smithy/types@3.3.0
+  - @smithy/node-config-provider@3.1.3
+  - @smithy/protocol-http@4.0.3
+  - @smithy/util-middleware@3.0.3
+
+## 3.0.3
+
+### Patch Changes
+
+- Updated dependencies [c16e014]
+- Updated dependencies [c2a5595]
+  - @smithy/types@3.2.0
+  - @smithy/node-config-provider@3.1.2
+  - @smithy/protocol-http@4.0.2
+  - @smithy/util-middleware@3.0.2
+
+## 3.0.2
+
+### Patch Changes
+
+- Updated dependencies [38da9009]
+  - @smithy/types@3.1.0
+  - @smithy/node-config-provider@3.1.1
+  - @smithy/protocol-http@4.0.1
+  - @smithy/util-middleware@3.0.1
+
+## 3.0.1
+
+### Patch Changes
+
+- Updated dependencies [1cdd3be0]
+  - @smithy/node-config-provider@3.1.0
+
+## 3.0.0
+
+### Major Changes
+
+- 671aa704: update to node16 minimum
+
+### Patch Changes
+
+- Updated dependencies [7a7c84d3]
+- Updated dependencies [671aa704]
+  - @smithy/types@3.0.0
+  - @smithy/node-config-provider@3.0.0
+  - @smithy/util-config-provider@3.0.0
+  - @smithy/is-array-buffer@3.0.0
+  - @smithy/util-middleware@3.0.0
+  - @smithy/protocol-http@4.0.0
+  - @smithy/util-utf8@3.0.0
+
+## 2.2.0
+
+### Minor Changes
+
+- 38f9a61f: Update package dependencies
+
+### Patch Changes
+
+- Updated dependencies [38f9a61f]
+- Updated dependencies [661f1d60]
+  - @smithy/node-config-provider@2.3.0
+  - @smithy/util-config-provider@2.3.0
+  - @smithy/is-array-buffer@2.2.0
+  - @smithy/util-middleware@2.2.0
+  - @smithy/protocol-http@3.3.0
+  - @smithy/util-utf8@2.3.0
+  - @smithy/types@2.12.0
+
+## 2.1.5
+
+### Patch Changes
+
+- Updated dependencies [43f3e1e2]
+  - @smithy/util-utf8@2.2.0
+  - @smithy/types@2.11.0
+  - @smithy/node-config-provider@2.2.5
+  - @smithy/protocol-http@3.2.2
+  - @smithy/util-middleware@2.1.4
+
+## 2.1.4
+
+### Patch Changes
+
+- @smithy/node-config-provider@2.2.4
+
+## 2.1.3
+
+### Patch Changes
+
+- Updated dependencies [dd0d9b4b]
+  - @smithy/types@2.10.1
+  - @smithy/node-config-provider@2.2.3
+  - @smithy/protocol-http@3.2.1
+  - @smithy/util-middleware@2.1.3
+
+## 2.1.2
+
+### Patch Changes
+
+- Updated dependencies [d70a00ac]
+- Updated dependencies [1e23f967]
+- Updated dependencies [929801bc]
+  - @smithy/types@2.10.0
+  - @smithy/protocol-http@3.2.0
+  - @smithy/node-config-provider@2.2.2
+  - @smithy/util-middleware@2.1.2
+
+## 2.1.1
+
+### Patch Changes
+
+- 2b1bf055: generate dist-cjs with runtime list of export names for esm
+- Updated dependencies [2b1bf055]
+  - @smithy/is-array-buffer@2.1.1
+  - @smithy/node-config-provider@2.2.1
+  - @smithy/protocol-http@3.1.1
+  - @smithy/types@2.9.1
+  - @smithy/util-config-provider@2.2.1
+  - @smithy/util-middleware@2.1.1
+  - @smithy/util-utf8@2.1.1
+
+## 2.1.0
+
+### Minor Changes
+
+- 9939f823: bundle dist-cjs index
+
+### Patch Changes
+
+- Updated dependencies [9939f823]
+  - @smithy/node-config-provider@2.2.0
+  - @smithy/util-config-provider@2.2.0
+  - @smithy/is-array-buffer@2.1.0
+  - @smithy/util-middleware@2.1.0
+  - @smithy/protocol-http@3.1.0
+  - @smithy/util-utf8@2.1.0
+  - @smithy/types@2.9.0
+
+## 2.0.2
+
+### Patch Changes
+
+- f48de633: Make CompressionInputConfig properties optional
+
+## 2.0.1
+
+### Patch Changes
+
+- e21ed11d: Accept Provider in CompressionInputConfig
+
+## 2.0.0
+
+### Major Changes
+
+- 35d6b218: Add middleware and plugin for request compression
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.

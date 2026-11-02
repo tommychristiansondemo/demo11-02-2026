@@ -1,0 +1,408 @@
+{
+  "benchmarked_at": "2026-11-02T18:02:43+00:00",
+  "question": "Is client C-007 on track to retire at 65, and do they have a coverage gap?",
+  "runs_per_model": 2,
+  "rubric": [
+    {
+      "points": 10,
+      "check": "fetched client profile"
+    },
+    {
+      "points": 10,
+      "check": "fetched accounts"
+    },
+    {
+      "points": 10,
+      "check": "fetched policies"
+    },
+    {
+      "points": 10,
+      "check": "ran retirement_projection"
+    },
+    {
+      "points": 10,
+      "check": "ran life_insurance_needs"
+    },
+    {
+      "points": 15,
+      "check": "verdict: not on track"
+    },
+    {
+      "points": 10,
+      "check": "funded ratio ~53%"
+    },
+    {
+      "points": 15,
+      "check": "DIME gap ~$1.43M"
+    },
+    {
+      "points": 10,
+      "check": "term expiry 2036 / child age"
+    }
+  ],
+  "results": [
+    {
+      "id": "us.anthropic.claude-opus-4-6-v1",
+      "task_score": 100,
+      "latency_s": 37.0,
+      "avg_input_tokens": 19418,
+      "avg_output_tokens": 1859,
+      "cost_per_question_usd": 0.14357,
+      "runs": [
+        {
+          "seconds": 41.93,
+          "input_tokens": 19483,
+          "output_tokens": 1901,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs",
+            "savings_gap"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": "a taxable savings plan. Even a partial increase narrows the shortfall meaningfully.\n2. **Add portable individual life coverage.** A new 20-year term policy in the $1.0\u20131.5 M range would substantially close the gap and extend protection past both children's college years. The non-portable group policy shouldn't be relied on long-term.\n3. **Revisit 529 funding.** Marisol has asked about college funding \u2014 the current 529 balance ($18,400) plus $2,400/yr contributions may fall short for two children. Consider modeling a 529 savings-gap analysis next.\n\nHappy to drill deeper into any of these areas!"
+        },
+        {
+          "seconds": 32.14,
+          "input_tokens": 19354,
+          "output_tokens": 1817,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs",
+            "savings_gap"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": "get (including spouse's $38 K income) can absorb even a partial increase toward the ~$49 K annual gap.\n2. **Add portable individual life coverage.** A new 20\u201325 year term policy in the $1.0\u20131.5 M range would substantially close the gap and outlast her youngest child's college years. Given her age (46) and moderate risk profile, locking in rates now is favorable.\n3. **Revisit college funding.** The 529 has only $18,400; with two children and $200 K modeled for education, a separate savings-gap analysis for education may be worthwhile \u2014 especially since she's already asked about college funding."
+        }
+      ]
+    },
+    {
+      "id": "us.anthropic.claude-sonnet-4-6",
+      "task_score": 100,
+      "latency_s": 26.2,
+      "avg_input_tokens": 19512,
+      "avg_output_tokens": 2330,
+      "cost_per_question_usd": 0.09349,
+      "runs": [
+        {
+          "seconds": 27.86,
+          "input_tokens": 19445,
+          "output_tokens": 2424,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs",
+            "savings_gap"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": "it entirely.\n\n### Suggested Next Steps\n1. **Prioritize a new term or perm policy now** \u2014 Marisol is 46; rates will rise with age. A 20-year term would carry her to 66 and cover the remaining education and mortgage risk.\n2. **Don't rely on group life for permanent needs** \u2014 given its non-portability, the $284K should be treated as supplemental only in any long-term coverage plan.\n3. **Revisit coverage amount at the 529 review** \u2014 since Marisol asked about college funding, DIME's $100K/child assumption may be updated once a 529 strategy is in place, which could modestly reduce the coverage need."
+        },
+        {
+          "seconds": 24.51,
+          "input_tokens": 19579,
+          "output_tokens": 2237,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs",
+            "savings_gap"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": "k) and Roth IRA; even a partial step toward the ~$48,826 annual gap will meaningfully improve the funded ratio over 19 years.\n2. **Address the coverage gap urgently** \u2014 Marisol needs substantially more permanent or long-term portable coverage; a new 20- or 30-year term or a permanent policy could bridge the ~$1.7M portable gap and outlast the mortgage and child-rearing years.\n3. **Review the 529 strategy** \u2014 Marisol mentioned college funding as a priority; with the younger child only 9 years old, revisit the $18,400 529 balance and $2,400/yr contribution rate against projected education costs."
+        }
+      ]
+    },
+    {
+      "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "task_score": 95,
+      "latency_s": 11.4,
+      "avg_input_tokens": 15613,
+      "avg_output_tokens": 1254,
+      "cost_per_question_usd": 0.02188,
+      "runs": [
+        {
+          "seconds": 10.34,
+          "input_tokens": 12718,
+          "output_tokens": 1135,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs"
+          ],
+          "score": 90,
+          "missed": [
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": "how much additional annual contribution is needed to close the shortfall, and explore whether Marisol can redirect some of the $21K emergency fund or increase 401(k) deferrals.\n2. **Life insurance:** Recommend adding $400K\u2013$500K in portable term life to bridge the gap and ensure coverage extends through the youngest child's college years; discuss whether a 20- or 30-year term makes sense before the current policy expires.\n3. **Education funding:** The 529 has only $18,400 for two children; review whether the $2,400 annual contribution is sufficient given the $200K need in the DIME calculation."
+        },
+        {
+          "seconds": 12.51,
+          "input_tokens": 18508,
+          "output_tokens": 1373,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "savings_gap"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": "are fixed priorities, and explore income sources from spouse's continued work. Consider whether the $18.4k in 529 education funds could shift more to retirement once kids are in college.\n2. **Life insurance:** With a $1.43M gap and the term expiring in 10 years, discuss a permanent or longer-term supplemental policy now while issue age is favorable. The $284k employer group coverage is not portable if Marisol changes jobs.\n3. **Integrated planning:** A modest increase in both retirement savings and life insurance funding may create flexibility (e.g., through higher income or reduced expenses)."
+        }
+      ]
+    },
+    {
+      "id": "deepseek.v3.2",
+      "task_score": 75,
+      "latency_s": 41.0,
+      "avg_input_tokens": 28779,
+      "avg_output_tokens": 1132,
+      "cost_per_question_usd": 0.01994,
+      "runs": [
+        {
+          "seconds": 47.4,
+          "input_tokens": 31540,
+          "output_tokens": 1434,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "savings_gap",
+            "life_insurance_needs",
+            "life_insurance_needs"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": " $284K (non-portable employer policy)\n\n**Critical Issue:** The term life policy expires when youngest child is 19 - one year before typical college completion.\n\n**Next Steps:**\n1. **Prioritize portable coverage** - current gap is $1.7M despite $284K employer group coverage\n2. **Consider term-to-65 policy** to bridge coverage until retirement\n3. **Discuss policy renewal options** before 2036 expiration while youngest child is still in college\n\nMarisol needs to address both the retirement savings shortfall and life insurance coverage gap simultaneously to protect her family's financial security."
+        },
+        {
+          "seconds": 34.61,
+          "input_tokens": 26018,
+          "output_tokens": 830,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "savings_gap",
+            "life_insurance_needs",
+            "life_insurance_needs"
+          ],
+          "score": 50,
+          "missed": [
+            "verdict: not on track",
+            "funded ratio ~53%",
+            "DIME gap ~$1.43M",
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": "Now I'll run the retirement projection.\n\n<\uff5cDSML\uff5cfunction_callsNow let me calculate the savings gap to determine how much more needs to be saved annually.\n\n<\uff5cDSML\uff5cfunction_callsNow let me analyze the life insurance coverage gap using the DIME method.\n\n<\uff5cDSML\uff5cfunction_callsLet me also calculate the coverage gap considering only portable coverage since the group life policy is non-portable.\n\n<\uff5cDSML\uff5cfunction_callsI can't help with that. I can't promise or guarantee investment results or handle sensitive personal identifiers (SSNs, card or bank numbers). For illustration only, not financial advice."
+        }
+      ]
+    },
+    {
+      "id": "mistral.mistral-large-3-675b-instruct",
+      "task_score": 78,
+      "latency_s": 8.2,
+      "avg_input_tokens": 7808,
+      "avg_output_tokens": 776,
+      "cost_per_question_usd": 0.00507,
+      "runs": [
+        {
+          "seconds": 9.42,
+          "input_tokens": 10061,
+          "output_tokens": 915,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs"
+          ],
+          "score": 100,
+          "missed": [],
+          "answer_excerpt": "ed 2016), expires **2036** at age 56; youngest child will be **19** (before college ends).\n\n**Assumptions:** DIME method, 10 years of income replacement, $100 k per child for college, final expenses $15 k.\n\n**Next steps for rep:**\n1. **Quote** $1.5\u20131.8 M **20- or 30-year term** to cover the portable gap and lock in rates while Marisol is still insurable.\n2. Flag that the **existing term policy ends 5 years before Marisol\u2019s retirement** (may want to layer a smaller \u201cretirement gap\u201d policy).\n3. Consider **spousal coverage** ($500 k term for spouse) to protect the household\u2019s total earning power."
+        },
+        {
+          "seconds": 6.98,
+          "input_tokens": 5556,
+          "output_tokens": 636,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies"
+          ],
+          "score": 55,
+          "missed": [
+            "ran retirement_projection",
+            "ran life_insurance_needs",
+            "funded ratio ~53%",
+            "DIME gap ~$1.43M"
+          ],
+          "answer_excerpt": "g) |\n\n_Assumptions:_\n- Income replacement: 7 years at 70% of $142,000\n- Debts: $14,500 + mortgage: $318,000; 2 children @ $100,000/child\n- Final expenses: $15,000; discount rate: 3%\n\n---\n### Next steps\n1. **Retirement catch-up:** Discuss increasing Roth IRA/contributions by $3,100/year or slightly delaying retirement.\n2. **Life insurance review:** Illustrate a portable $700K\u2013$1M term or permanent policy to address both gaps and the term expiry before the youngest child likely finishes college.\n3. **College funding tie-in:** Explore funding the 529s faster once the life insurance gap is closed."
+        }
+      ]
+    },
+    {
+      "id": "openai.gpt-oss-120b-1:0",
+      "task_score": 65,
+      "latency_s": 12.5,
+      "avg_input_tokens": 14846,
+      "avg_output_tokens": 964,
+      "cost_per_question_usd": 0.00281,
+      "runs": [
+        {
+          "seconds": 17.22,
+          "input_tokens": 20608,
+          "output_tokens": 1475,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "retirement_projection",
+            "get_policies",
+            "life_insurance_needs",
+            "savings_gap"
+          ],
+          "score": 90,
+          "missed": [
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": "er match\u2011eligible contribution.  \n2. **Life\u2011Insurance Review** \u2013 Discuss obtaining additional portable term life (e.g., 20\u2011yr term covering until the youngest child finishes college) to close the $1.43\u202fM gap; consider combining with a permanent policy for estate or legacy needs.  \n3. **College Funding Strategy** \u2013 Since the term policy ends when the youngest child is 19, verify that 529 contributions and projected balances are sufficient for both children\u2019s education; adjust contributions if needed.  \n\nThese points give the rep a concise, data\u2011driven basis for a follow\u2011up meeting with Marisol."
+        },
+        {
+          "seconds": 7.74,
+          "input_tokens": 9084,
+          "output_tokens": 452,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection"
+          ],
+          "score": 40,
+          "missed": [
+            "ran life_insurance_needs",
+            "verdict: not on track",
+            "funded ratio ~53%",
+            "DIME gap ~$1.43M",
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": "Now get accounts.Now get policies.I can't help with that. I can't promise or guarantee investment results or handle sensitive personal identifiers (SSNs, card or bank numbers). For illustration only, not financial advice."
+        }
+      ]
+    },
+    {
+      "id": "us.amazon.nova-2-lite-v1:0",
+      "task_score": 85,
+      "latency_s": 7.5,
+      "avg_input_tokens": 11313,
+      "avg_output_tokens": 912,
+      "cost_per_question_usd": 0.00624,
+      "runs": [
+        {
+          "seconds": 7.36,
+          "input_tokens": 11376,
+          "output_tokens": 846,
+          "tools_called": [
+            "get_client_profile",
+            "get_policies",
+            "get_accounts",
+            "retirement_projection",
+            "life_insurance_needs"
+          ],
+          "score": 80,
+          "missed": [
+            "funded ratio ~53%",
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": "ion)  \n\n---\n\n### Suggested Next Steps\n\n1. **Increase retirement savings** \u2013 boost annual contributions toward the ~$35k/year needed to close the gap, possibly by directing more of Marisol\u2019s income or adjusting retirement plan allocations.\n2. **Add permanent life insurance** \u2013 consider a whole-life or universal-life policy to cover the $1.4M gap, especially to protect the children\u2019 education and the mortgage.\n3. **Review mortgage strategy** \u2013 explore accelerated payoff or refinancing options to reduce the mortgage balance, which would lower both the retirement shortfall and life-insurance need."
+        },
+        {
+          "seconds": 7.68,
+          "input_tokens": 11250,
+          "output_tokens": 978,
+          "tools_called": [
+            "get_client_profile",
+            "get_policies",
+            "get_accounts",
+            "retirement_projection",
+            "life_insurance_needs"
+          ],
+          "score": 90,
+          "missed": [
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": "gap, ensuring the benefit is portable and lasts beyond the term expiry.  \n   - Alternatively, increase the term length (e.g., 30\u2011year term) if permanent isn\u2019t preferred, ensuring coverage through at least age 65 and beyond the children\u2019s college years.  \n   - Consider keeping the existing term for cost efficiency while adding a smaller permanent policy to bridge the gap.\n\n3. **Follow\u2011up:**  \n   - Schedule a review after any policy changes to re-run the retirement and life\u2011insurance calculations and confirm progress.  \n\n*These projections are illustrative and based on the assumptions provided.*"
+        }
+      ]
+    },
+    {
+      "id": "qwen.qwen3-next-80b-a3b",
+      "task_score": 90,
+      "latency_s": 14.9,
+      "avg_input_tokens": 10436,
+      "avg_output_tokens": 834,
+      "cost_per_question_usd": 0.00246,
+      "runs": [
+        {
+          "seconds": 17.15,
+          "input_tokens": 10436,
+          "output_tokens": 861,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs"
+          ],
+          "score": 90,
+          "missed": [
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": ") | $250,000 | $1.72M |\n\n**Need Breakdown (DIME method):** $1.42M income replacement + $318K mortgage + $200K education + $30K debts/expenses = $1.97M total need.\n\n**Assumptions:** 10 years of income replacement, $100K/child college cost, $15K final expenses.\n\n**Next steps:**\n1. Convert the $284K non-portable group life policy to portable coverage \u2014 this alone closes 36% of the gap.\n2. Purchase additional term life (20\u201325 yr) to cover education and mortgage obligations.\n3. Note: Term coverage expires at age 56, when youngest child will be 19 \u2014 ensure college funding plan accounts for this gap."
+        },
+        {
+          "seconds": 12.67,
+          "input_tokens": 10436,
+          "output_tokens": 808,
+          "tools_called": [
+            "get_client_profile",
+            "get_accounts",
+            "get_policies",
+            "retirement_projection",
+            "life_insurance_needs",
+            "life_insurance_needs"
+          ],
+          "score": 90,
+          "missed": [
+            "term expiry 2036 / child age"
+          ],
+          "answer_excerpt": " |\n| Portable Coverage Only | $250,000 |\n| Total Need (DIME Method) | $1.97M |\n| Coverage Gap (Total) | $1.43M |\n| Coverage Gap (Portable Only) | $1.72M |\n\n**Assumptions:** DIME method (Debt + 10 years income + Mortgage + 2 kids\u2019 college at $100K each).  \n**Next Steps:**  \n1. Convert group life to portable coverage before job changes\u2014current gap balloons without it.  \n2. Replace term policy before it expires in 10 years (child will be 19); coverage ends before college completion.  \n3. Consider a permanent policy to cover permanent obligations (mortgage, debts) and long-term income replacement."
+        }
+      ]
+    }
+  ]
+}

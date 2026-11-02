@@ -1,0 +1,13 @@
+opentelemetry/instrumentation/sqlite3/__init__.py,sha256=zolBbcuKct_A7Gf8fP-aJmsD57HmZ4f8PqbeaNfYTDQ,4198
+opentelemetry/instrumentation/sqlite3/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/sqlite3/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/sqlite3/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/sqlite3/package.py,sha256=S7rzsXQLmb-u9I7J6b9jamuBADUPRFqb3hdJ8fZ5y6o,183
+opentelemetry/instrumentation/sqlite3/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opentelemetry/instrumentation/sqlite3/version.py,sha256=dOeXglOUgIkHUnuBDsADGtUogOmwj9wlo3jYNolo0sg,124
+opentelemetry_instrumentation_sqlite3-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_sqlite3-0.66b1.dist-info/METADATA,sha256=BKtNf9teX2vtNRBHxvT9bmWHtWlEzNz5XxQ0bYSICyI,1913
+opentelemetry_instrumentation_sqlite3-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_sqlite3-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_sqlite3-0.66b1.dist-info/entry_points.txt,sha256=Y0W_tkw9CVJE4hk_u2KJBeNPbj5Rw80HEV2rV5rEats,97
+opentelemetry_instrumentation_sqlite3-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

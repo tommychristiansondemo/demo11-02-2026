@@ -1,0 +1,16 @@
+opentelemetry/instrumentation/tornado/__init__.py,sha256=9ijRVI1IR5zXA4Dw_5mKJCvwBmMpcgSQNAXRuGjMmFI,33704
+opentelemetry/instrumentation/tornado/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/tornado/__pycache__/_utils.cpython-312.pyc,,
+opentelemetry/instrumentation/tornado/__pycache__/client.cpython-312.pyc,,
+opentelemetry/instrumentation/tornado/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/tornado/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/tornado/_utils.py,sha256=fY5tkklmDcvkAje3n-rQ8rzzTiP_uQ19-Iy5oLJs29s,2956
+opentelemetry/instrumentation/tornado/client.py,sha256=zK0GTtunu-j4JfQMKkUHW5lC-TwmgJLl7pEuKShlNk8,7320
+opentelemetry/instrumentation/tornado/package.py,sha256=qArtxRO9t_9Vkmnqh0Er0vjyWqWNxsINkPjkG8nLIF4,172
+opentelemetry/instrumentation/tornado/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_tornado-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_tornado-0.66b1.dist-info/METADATA,sha256=YfcSuBrqxznKWTCgIjaiZIxKfTZueYwqphI9z_zmhP8,2074
+opentelemetry_instrumentation_tornado-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_tornado-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_tornado-0.66b1.dist-info/entry_points.txt,sha256=oDTErilMYHHuN6bv9XNAU1Avoy8f_nfCx91bASSkpgg,97
+opentelemetry_instrumentation_tornado-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

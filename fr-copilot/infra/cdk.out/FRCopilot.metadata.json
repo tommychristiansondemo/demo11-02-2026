@@ -1,0 +1,2315 @@
+{
+  "/FRCopilot": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    },
+    {
+      "type": "aws:cdk:templateFile",
+      "data": "FRCopilot.template.json"
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "Owner",
+          "value": "Instructor"
+        },
+        {
+          "key": "Project",
+          "value": "FRCopilot"
+        }
+      ]
+    }
+  ],
+  "/FRCopilot/Clients": [
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "Clients67031123"
+      }
+    }
+  ],
+  "/FRCopilot/AWS679f53fac002430cb0da5b7982bd2287": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 0
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 0
+    }
+  ],
+  "/FRCopilot/AgentOAuthProvider": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentOAuthProvider"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "oauthProvider (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:117:17)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:138:27)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayOAuthProvider": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayOAuthProvider"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "oauthProvider (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:117:17)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:139:29)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Guardrail": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Guardrail"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:180:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GuardrailVersionf1a86c41b117": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GuardrailVersionf1a86c41b117"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:182:30)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Memory": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Memory"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:187:20)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AppConfigApp": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AppConfigApp"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:202:19)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AppConfigEnv": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AppConfigEnv"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:203:19)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/LlmProfile": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LlmProfile"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:216:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/InstantStrategy": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "InstantStrategy"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:221:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ClientProfileMcp": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientProfileMcp"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "mkRuntime (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:323:18)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:347:28)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/PlanningCalcMcp": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PlanningCalcMcp"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "mkRuntime (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:323:18)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:349:25)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Gateway": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Gateway"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:353:21)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ProfileTarget": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProfileTarget"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "mkTarget (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:364:17)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:376:27)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/CalcTarget": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CalcTarget"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "mkTarget (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:364:17)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:377:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Agent": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Agent"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "mkRuntime (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:323:18)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:381:26)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsLogSrc": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsLogSrc"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:398:22)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsLogDst": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsLogDst"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:399:22)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsLogDelivery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsLogDelivery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:400:7)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsTraceSrc": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsTraceSrc"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:402:21)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsTraceDst": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsTraceDst"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:403:21)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsTraceDelivery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsTraceDelivery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:404:7)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsLogSrc": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsLogSrc"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:398:22)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsLogDst": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsLogDst"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:399:22)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsLogDelivery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsLogDelivery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:400:7)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsTraceSrc": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsTraceSrc"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:402:21)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsTraceDst": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsTraceDst"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:403:21)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsTraceDelivery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsTraceDelivery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:404:7)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+      "data": true
+    }
+  ],
+  "/FRCopilot/AWSCloudFrontPartitionHostedZoneIdMap": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AWSCloudFrontPartitionHostedZoneIdMap"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new ARecord2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:518:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/DeploySiteLogs": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-logGroup",
+      "data": true
+    }
+  ],
+  "/FRCopilot/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 2
+    }
+  ],
+  "/FRCopilot/SiteUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SiteUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:572:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/CloudFrontDomain": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CloudFrontDomain"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:573:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/DistributionId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DistributionId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:574:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/UserPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:575:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/PreSignUpFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PreSignUpFunction"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:576:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/WebClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WebClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:577:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ApiUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:578:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AgentRuntimeArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentRuntimeArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:579:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ClientProfileRuntimeArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientProfileRuntimeArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:580:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/PlanningCalcRuntimeArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PlanningCalcRuntimeArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:581:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:582:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:583:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:584:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AgentModelId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentModelId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:585:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AppConfigAppId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AppConfigAppId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:586:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AppConfigEnvId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AppConfigEnvId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:587:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AppConfigProfileId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AppConfigProfileId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:588:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AppConfigStrategyId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AppConfigStrategyId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:589:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/LlmCandidates": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LlmCandidates"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:590:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GuardrailId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GuardrailId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:591:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GuardrailVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GuardrailVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:592:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ClientsTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientsTable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:593:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/SiteBucket": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SiteBucket"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:594:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/CertificateArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CertificateArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:595:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/DashboardUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DashboardUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "out (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:571:43)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:596:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Clients/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Clients67031123"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new TableV22 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:38:19)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/PreSignUpLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PreSignUpLogsA7242E9C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:53:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/PreSignUp/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PreSignUp1C2BA29E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:47:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/PreSignUpCognito": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsPreSignUpCognitoF870085D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new UserPool2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:55:18)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsC0120BBE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new UserPool2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:55:18)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...get userPoolClientSecret in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:92:109)"
+      ]
+    }
+  ],
+  "/FRCopilot/AgentM2MSecret/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentM2MSecretEAFC5B32"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Secret2 in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:89:81)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:95:28)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayM2MSecret/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayM2MSecretE6589100"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Secret2 in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:89:81)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:96:30)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/DemoUser-rep-jordan/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DemoUserrepjordan451DD930"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Secret2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:100:7)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/DemoUser-rep-casey/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DemoUserrepcasey4823E6B4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Secret2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:100:7)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ProfileMcpRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProfileMcpRole95AE33A8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Role2 in aws-cdk-lib...",
+        "runtimeRole (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:231:20)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:270:25)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/CalcMcpRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CalcMcpRoleA57E6DCA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Role2 in aws-cdk-lib...",
+        "runtimeRole (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:231:20)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:274:22)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AgentRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentRoleF4A42D6B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Role2 in aws-cdk-lib...",
+        "runtimeRole (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:231:20)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:275:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayRole0A0569CA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Role2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:297:25)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayObsLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayObsLogsD18F3DDC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:395:18)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:407:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/MemoryObsLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MemoryObsLogsE797254D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "vended (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:395:18)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:408:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ChatProxyLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ChatProxyLogs524F4445"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:419:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ChatProxy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ChatProxy8D0AD4B7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:411:20)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ClientsApiLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientsApiLogsB2082FA7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:429:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ClientsApi/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientsApi773F7734"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:421:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiF70053CD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:433:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Endpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiEndpoint4F160690"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:433:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/RepAuthorizer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepAuthorizerEBACF079"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new CognitoUserPoolsAuthorizer2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:440:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/LlmSelectorLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LlmSelectorLogs43AEE137"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:456:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/LlmSelector/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LlmSelectorF18D5D1A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:449:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Cert/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Cert5C9FAEC1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Certificate2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:472:18)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Site/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SiteE53D7754"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:475:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketAutoDeleteObjects"
+      }
+    }
+  ],
+  "/FRCopilot/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/SecurityHeaders/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SecurityHeadersE66B69D3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new ResponseHeadersPolicy2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:483:21)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Cdn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Cdn9963B1AD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Distribution2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:493:18)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/WwwA/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WwwA1EFC0D36"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new ARecord2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:518:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/WwwAAAA/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WwwAAAA4BB8D3AB"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new AaaaRecord2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:519:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/DeploySiteLogs/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeploySiteLogs9970AE67"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new LogGroup2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:527:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:521:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)"
+      ]
+    }
+  ],
+  "/FRCopilot/Dashboard/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Dashboard9E4231ED"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Dashboard2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:535:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Exports/Output{\"Ref\":\"AppConfigApp\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefAppConfigApp1B652AAA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Exports/Output{\"Ref\":\"AppConfigEnv\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefAppConfigEnv191C91EB"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Exports/Output{\"Ref\":\"LlmProfile\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefLlmProfile38435F63"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Exports/Output{\"Ref\":\"RepsC0120BBE\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefRepsC0120BBE43A91D44"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Exports/Output{\"Fn::GetAtt\":[\"RepsC0120BBE\",\"Arn\"]}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputFnGetAttRepsC0120BBEArn0BA4590C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/PreSignUp/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PreSignUpServiceRole5058B34C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:47:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/Domain/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsDomainCBF15BF5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addDomain in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:69:25)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/Api/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsApi2A8BD7B0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addResourceServer in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:72:21)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/Web/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsWebC4EAE00C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addClient in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:74:28)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/AgentM2M/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsAgentM2MAAAD00ED"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addClient in aws-cdk-lib...",
+        "m2mClient (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:80:95)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:85:22)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/GatewayM2M/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsGatewayM2MADEFE2AD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addClient in aws-cdk-lib...",
+        "m2mClient (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:80:95)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:86:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/ProfileMcpRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProfileMcpRoleDefaultPolicy682B3B2F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "runtimeRole (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:238:12)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:270:25)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)"
+      ]
+    }
+  ],
+  "/FRCopilot/CalcMcpRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CalcMcpRoleDefaultPolicy6091F920"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "runtimeRole (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:238:12)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:274:22)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)"
+      ]
+    }
+  ],
+  "/FRCopilot/AgentRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentRoleDefaultPolicy1027F5D2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "runtimeRole (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:238:12)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:275:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)"
+      ]
+    }
+  ],
+  "/FRCopilot/GatewayRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GatewayRoleDefaultPolicyF4BF688C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:304:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)"
+      ]
+    }
+  ],
+  "/FRCopilot/ChatProxy/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ChatProxyServiceRoleF30B0CDA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:411:20)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/ClientsApi/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientsApiServiceRoleBC84B10D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:421:23)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Deployment/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiDeploymentB17BE62D2df437e583bbdd17330c5592078da34b"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:433:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/DeploymentStage.prod/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiDeploymentStageprod3EB9684E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:433:17)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/LlmSelector/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LlmSelectorServiceRoleE2E25E71"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:449:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Site/Policy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SitePolicyC4000D7D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:475:24)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)"
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketPolicyStatements"
+      }
+    }
+  ],
+  "/FRCopilot/Site/AutoDeleteObjectsCustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SiteAutoDeleteObjectsCustomResourceBFAA9B42"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/DeploySite/AwsCliLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeploySiteAwsCliLayer88B0EBE2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:521:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/DeploySite/CustomResource-512MiB/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeploySiteCustomResource512MiB5775DB62"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:521:5)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/ChatProxy/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ChatProxyServiceRoleDefaultPolicy34E1B28F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:411:20)"
+      ]
+    }
+  ],
+  "/FRCopilot/ClientsApi/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientsApiServiceRoleDefaultPolicy28A773C8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:421:23)"
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apiapi0E601135"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...RootResource.addResource in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:442:30)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/LlmSelector/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LlmSelectorServiceRoleDefaultPolicyB0A1AC59"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Function2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:449:24)"
+      ]
+    }
+  ],
+  "/FRCopilot/Cdn/Origin1/S3OriginAccessControl/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CdnOrigin1S3OriginAccessControl6AC0AEFC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Distribution2 in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:493:18)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)"
+      ]
+    }
+  ],
+  "/FRCopilot/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/AgentM2M/DescribeCognitoUserPoolClient/Resource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsAgentM2MDescribeCognitoUserPoolClient92F4E9A5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...get userPoolClientSecret in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:92:109)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:95:28)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)"
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/AgentM2M/DescribeCognitoUserPoolClient/CustomResourcePolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsAgentM2MDescribeCognitoUserPoolClientCustomResourcePolicyFA86FA40"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...get userPoolClientSecret in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:92:109)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:95:28)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)"
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/GatewayM2M/DescribeCognitoUserPoolClient/Resource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsGatewayM2MDescribeCognitoUserPoolClient580083BC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...get userPoolClientSecret in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:92:109)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:96:30)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)"
+      ]
+    }
+  ],
+  "/FRCopilot/Reps/GatewayM2M/DescribeCognitoUserPoolClient/CustomResourcePolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RepsGatewayM2MDescribeCognitoUserPoolClientCustomResourcePolicyBD5AFA73"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...get userPoolClientSecret in aws-cdk-lib...",
+        "m2mSecret (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:92:109)",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:96:30)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)"
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/chat/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apiapichat32253773"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addResource in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:443:13)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/clients/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapiclientsBFECAC78"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addResource in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:446:13)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apiapillm20068F60"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addResource in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:465:28)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/chat/POST/ApiPermission.FRCopilotApi5D72366A.POST..api.chat": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapichatPOSTApiPermissionFRCopilotApi5D72366APOSTapichat11FB8851"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:443:33)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/chat/POST/ApiPermission.Test.FRCopilotApi5D72366A.POST..api.chat": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapichatPOSTApiPermissionTestFRCopilotApi5D72366APOSTapichat0D6C2665"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:443:33)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/chat/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapichatPOST70239852"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:443:33)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/clients/GET/ApiPermission.FRCopilotApi5D72366A.GET..api.clients": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapiclientsGETApiPermissionFRCopilotApi5D72366AGETapiclients0C4FB5A2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:446:36)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/clients/GET/ApiPermission.Test.FRCopilotApi5D72366A.GET..api.clients": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapiclientsGETApiPermissionTestFRCopilotApi5D72366AGETapiclientsCC589AF3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:446:36)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/clients/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapiclientsGET1EA5AD65"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:446:36)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/GET/ApiPermission.FRCopilotApi5D72366A.GET..api.llm": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapillmGETApiPermissionFRCopilotApi5D72366AGETapillm04BDBECB"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:467:12)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/GET/ApiPermission.Test.FRCopilotApi5D72366A.GET..api.llm": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapillmGETApiPermissionTestFRCopilotApi5D72366AGETapillm3EECF3D3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:467:12)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapillmGET514F1A25"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:467:12)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/POST/ApiPermission.FRCopilotApi5D72366A.POST..api.llm": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapillmPOSTApiPermissionFRCopilotApi5D72366APOSTapillmDB85FCD9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:468:12)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/POST/ApiPermission.Test.FRCopilotApi5D72366A.POST..api.llm": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapillmPOSTApiPermissionTestFRCopilotApi5D72366APOSTapillm04E08FCE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:468:12)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/FRCopilot/Api/Default/api/llm/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapillmPOST358DFB8E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.addMethod in aws-cdk-lib...",
+        "new FrCopilotStack (/home/tommy/demo/fr-copilot/infra/lib/fr-copilot-stack.ts:468:12)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:18:14)",
+        "<anonymous> (/home/tommy/demo/fr-copilot/infra/bin/app.ts:33:2)",
+        "...node internals, tsx..."
+      ]
+    }
+  ]
+}

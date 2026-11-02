@@ -1,0 +1,14 @@
+opentelemetry/instrumentation/kafka/__init__.py,sha256=ta-gWiIlAiry4Dm93wZFYgX9uuZNpbu2iBk_aYH01Qs,4410
+opentelemetry/instrumentation/kafka/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/kafka/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/kafka/__pycache__/utils.cpython-312.pyc,,
+opentelemetry/instrumentation/kafka/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/kafka/package.py,sha256=Sa1zoqikWU_ibnuDcep-SNqbhYHdluC4Rj4CgwAhg8M,125
+opentelemetry/instrumentation/kafka/utils.py,sha256=_TuQiT4AehGRwO9SahpPTA10NSY563XR0nz4jJorbLI,6268
+opentelemetry/instrumentation/kafka/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_kafka_python-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_kafka_python-0.66b1.dist-info/METADATA,sha256=PhK9VQvOrU4XyuiB6pFaEflDo_ZeSTx3Hue3wketX74,2020
+opentelemetry_instrumentation_kafka_python-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_kafka_python-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_kafka_python-0.66b1.dist-info/entry_points.txt,sha256=QbxBjYkz5Meh8ICcI70ZNpmNqvUrlZhrEWd0NfOJnak,91
+opentelemetry_instrumentation_kafka_python-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

@@ -1,0 +1,12 @@
+opentelemetry/instrumentation/mysqlclient/__init__.py,sha256=bHTfdeghlVxpq9eu3bn7Q_rQFpA42xXYBWPB1BIAX08,10429
+opentelemetry/instrumentation/mysqlclient/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/mysqlclient/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/mysqlclient/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/mysqlclient/package.py,sha256=zX0fuU7CnXaIfPdsfVGgLML1AZWXgVc6qZOZTEsUoQA,145
+opentelemetry/instrumentation/mysqlclient/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_mysqlclient-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_mysqlclient-0.66b1.dist-info/METADATA,sha256=eyfr8R1HMVD_1e8B2xeOObhC6z4nLsKsBvLxfoN5A7Y,2009
+opentelemetry_instrumentation_mysqlclient-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_mysqlclient-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_mysqlclient-0.66b1.dist-info/entry_points.txt,sha256=OHLEn-s86Pg8tBGRyiAhT9foPE-xl2owz2tphXNKoJM,109
+opentelemetry_instrumentation_mysqlclient-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

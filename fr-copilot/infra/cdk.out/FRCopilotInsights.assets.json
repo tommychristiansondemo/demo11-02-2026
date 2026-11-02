@@ -1,0 +1,291 @@
+{
+  "version": "55.0.0",
+  "files": {
+    "b74190c8d617c3918787579f5bcd959f5200264227a123eb2f31ef90bbe61fc6": {
+      "displayName": "PreSignUp/Code",
+      "source": {
+        "path": "asset.b74190c8d617c3918787579f5bcd959f5200264227a123eb2f31ef90bbe61fc6",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-2f3d24f7": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "b74190c8d617c3918787579f5bcd959f5200264227a123eb2f31ef90bbe61fc6.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "9b8fce7ae7f25ef82fdbaf6b72523b99d0875c0c9c826642819fb51f11d9b125": {
+      "displayName": "AWS679f53fac002430cb0da5b7982bd2287/Code",
+      "source": {
+        "path": "asset.9b8fce7ae7f25ef82fdbaf6b72523b99d0875c0c9c826642819fb51f11d9b125",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-3e628c33": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "9b8fce7ae7f25ef82fdbaf6b72523b99d0875c0c9c826642819fb51f11d9b125.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "193390149db52db183ec600a28cf022e1d20350a620653da47d217545c1f59da": {
+      "displayName": "ClientProfileMcpCode",
+      "source": {
+        "path": "asset.193390149db52db183ec600a28cf022e1d20350a620653da47d217545c1f59da.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "154833006816-us-east-1-2d28ca0f": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "193390149db52db183ec600a28cf022e1d20350a620653da47d217545c1f59da.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "ffd8cef87c0d4c1b11c4acf83851dbbddc74d8f8de196b86700694fe9fbefc10": {
+      "displayName": "PlanningCalcMcpCode",
+      "source": {
+        "path": "asset.ffd8cef87c0d4c1b11c4acf83851dbbddc74d8f8de196b86700694fe9fbefc10.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "154833006816-us-east-1-4b37879e": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "ffd8cef87c0d4c1b11c4acf83851dbbddc74d8f8de196b86700694fe9fbefc10.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "7362db779e68756c77c3a163fd410f27f9705918d102b7e58c85c91ffcfa1315": {
+      "displayName": "AgentCode",
+      "source": {
+        "path": "asset.7362db779e68756c77c3a163fd410f27f9705918d102b7e58c85c91ffcfa1315.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "154833006816-us-east-1-c138868a": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "7362db779e68756c77c3a163fd410f27f9705918d102b7e58c85c91ffcfa1315.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "2ac633e3efa97d44a8f8da0964b97bc900b32f806d85dda30b375b17200e8fe7": {
+      "displayName": "ChatProxy/Code",
+      "source": {
+        "path": "asset.2ac633e3efa97d44a8f8da0964b97bc900b32f806d85dda30b375b17200e8fe7",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-0a54ffcd": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "2ac633e3efa97d44a8f8da0964b97bc900b32f806d85dda30b375b17200e8fe7.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "0fe7af9f2dd7c0c5950f22b00bf9d3160775b7b5e31892e92393b2745799f909": {
+      "displayName": "ClientsApi/Code",
+      "source": {
+        "path": "asset.0fe7af9f2dd7c0c5950f22b00bf9d3160775b7b5e31892e92393b2745799f909",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-4af51c7b": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "0fe7af9f2dd7c0c5950f22b00bf9d3160775b7b5e31892e92393b2745799f909.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "bdb22f6f6646930666ec037bd1a703d358cf9fad628cf714e3111192251f2407": {
+      "displayName": "LlmSelector/Code",
+      "source": {
+        "path": "asset.bdb22f6f6646930666ec037bd1a703d358cf9fad628cf714e3111192251f2407",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-41310a5a": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "bdb22f6f6646930666ec037bd1a703d358cf9fad628cf714e3111192251f2407.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6": {
+      "displayName": "FRCopilot/Custom::S3AutoDeleteObjectsCustomResourceProvider Code",
+      "source": {
+        "path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-6954aed4": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "98f62bef9320f8c0a0a7be21d7c746f069131f196f51ffe3008a6bb730b368ec": {
+      "displayName": "DeploySite/AwsCliLayer/Code",
+      "source": {
+        "path": "asset.98f62bef9320f8c0a0a7be21d7c746f069131f196f51ffe3008a6bb730b368ec.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "154833006816-us-east-1-da962b81": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "98f62bef9320f8c0a0a7be21d7c746f069131f196f51ffe3008a6bb730b368ec.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "35328da138f26fbd9160297abc9a2522d93dbf75878cd5114a9c050419fc1ce0": {
+      "displayName": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code",
+      "source": {
+        "path": "asset.35328da138f26fbd9160297abc9a2522d93dbf75878cd5114a9c050419fc1ce0",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-6f7fb4f8": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "35328da138f26fbd9160297abc9a2522d93dbf75878cd5114a9c050419fc1ce0.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "32534a2dce23a11c55039d2d69b4af98e04636b204df03a5ecaede4eff11509f": {
+      "displayName": "DeploySite/Asset1",
+      "source": {
+        "path": "asset.32534a2dce23a11c55039d2d69b4af98e04636b204df03a5ecaede4eff11509f",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-425c0dbd": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "32534a2dce23a11c55039d2d69b4af98e04636b204df03a5ecaede4eff11509f.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "1a13552c47105dc0b73fca370d711e42d19e401e5c5e34aacebe828549f719ab": {
+      "displayName": "DeploySite/Asset2",
+      "source": {
+        "path": "asset.1a13552c47105dc0b73fca370d711e42d19e401e5c5e34aacebe828549f719ab",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-eeedd139": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "1a13552c47105dc0b73fca370d711e42d19e401e5c5e34aacebe828549f719ab.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "ae63a15632d06b1268da2b9446a25fff11a5a7c6cd7ae9ce1ca2b918edb86eaa": {
+      "displayName": "Chat/Code",
+      "source": {
+        "path": "asset.ae63a15632d06b1268da2b9446a25fff11a5a7c6cd7ae9ce1ca2b918edb86eaa",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-cb176e4b": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "ae63a15632d06b1268da2b9446a25fff11a5a7c6cd7ae9ce1ca2b918edb86eaa.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "10b3c15d298de179ea10b60bae5e72331dd432eacfa24662d50a33fcf42e9a49": {
+      "displayName": "KnowledgeApi/Code",
+      "source": {
+        "path": "asset.10b3c15d298de179ea10b60bae5e72331dd432eacfa24662d50a33fcf42e9a49",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-50c917b6": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "10b3c15d298de179ea10b60bae5e72331dd432eacfa24662d50a33fcf42e9a49.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "ef0262a79fab3d42facbd5f1c56ee7d1aa1d5973efdd1aefc57d553dfb6056f3": {
+      "displayName": "DeploySite/Asset1",
+      "source": {
+        "path": "asset.ef0262a79fab3d42facbd5f1c56ee7d1aa1d5973efdd1aefc57d553dfb6056f3",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-d2988f31": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "ef0262a79fab3d42facbd5f1c56ee7d1aa1d5973efdd1aefc57d553dfb6056f3.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "43bd79ae95d2bb7fb8f4750370a52f59b4ecdcce2c1b91ec07f276e095c439c1": {
+      "displayName": "DeploySite/Asset2",
+      "source": {
+        "path": "asset.43bd79ae95d2bb7fb8f4750370a52f59b4ecdcce2c1b91ec07f276e095c439c1",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "154833006816-us-east-1-0f3ff1f2": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "43bd79ae95d2bb7fb8f4750370a52f59b4ecdcce2c1b91ec07f276e095c439c1.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "2983bf0c950a6f6137522f9002cfae22d8f5d224adbd0288312b1d8cf5f81003": {
+      "displayName": "FRCopilot Template",
+      "source": {
+        "path": "FRCopilot.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "154833006816-us-east-1-699e2fb4": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "2983bf0c950a6f6137522f9002cfae22d8f5d224adbd0288312b1d8cf5f81003.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    },
+    "06bdf6893abe9b1b58ae8d707786ba1fcaec5729a815aeb02d25fd3fbd93c709": {
+      "displayName": "FRCopilotInsights Template",
+      "source": {
+        "path": "FRCopilotInsights.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "154833006816-us-east-1-adb44a7f": {
+          "bucketName": "cdk-frcopilot-assets-154833006816-us-east-1",
+          "objectKey": "06bdf6893abe9b1b58ae8d707786ba1fcaec5729a815aeb02d25fd3fbd93c709.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::154833006816:role/cdk-frcopilot-file-publishing-role-154833006816-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

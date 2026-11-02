@@ -1,0 +1,16 @@
+opentelemetry/instrumentation/pika/__init__.py,sha256=VIGIPPIloitcjqtrl1ZTZWiNYWsr9AwKILykM11PmI0,3832
+opentelemetry/instrumentation/pika/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/pika/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/pika/__pycache__/pika_instrumentor.cpython-312.pyc,,
+opentelemetry/instrumentation/pika/__pycache__/utils.cpython-312.pyc,,
+opentelemetry/instrumentation/pika/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/pika/package.py,sha256=vg9IWGgPCQhII9wl818so6TMvXhxcFls9Jp9RLCW9pM,168
+opentelemetry/instrumentation/pika/pika_instrumentor.py,sha256=Cj1_Ev2QOpHfJVTX9_4AwzmKSWJVWWAIvIwM5Ah3BWY,8552
+opentelemetry/instrumentation/pika/utils.py,sha256=H4FHeDYAAaM8a88ocKBr_Xlzahmov45fAQXTXayI_-I,9238
+opentelemetry/instrumentation/pika/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_pika-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_pika-0.66b1.dist-info/METADATA,sha256=5RHnYyZt6NoAVvwsHZGBydabMu0G_fCYJ5-Mx1ndeBo,1936
+opentelemetry_instrumentation_pika-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_pika-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_pika-0.66b1.dist-info/entry_points.txt,sha256=hnEGtLtxwSjvLiNsE2U0TF9IrOe9EBieRjB2KunD4sk,88
+opentelemetry_instrumentation_pika-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

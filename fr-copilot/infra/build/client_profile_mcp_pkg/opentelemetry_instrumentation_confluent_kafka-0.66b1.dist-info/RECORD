@@ -1,0 +1,14 @@
+opentelemetry/instrumentation/confluent_kafka/__init__.py,sha256=rbj9maGD-TgivrJI2sTfxZpARPPNy7b5d_5PoLj7Ygo,15384
+opentelemetry/instrumentation/confluent_kafka/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/instrumentation/confluent_kafka/__pycache__/package.cpython-312.pyc,,
+opentelemetry/instrumentation/confluent_kafka/__pycache__/utils.cpython-312.pyc,,
+opentelemetry/instrumentation/confluent_kafka/__pycache__/version.cpython-312.pyc,,
+opentelemetry/instrumentation/confluent_kafka/package.py,sha256=D3JGKeGeMM7uqL8XfRBaEPKQSiC7kuvFUBJThGdcPLM,132
+opentelemetry/instrumentation/confluent_kafka/utils.py,sha256=qQI9YFPymxWXZmDXVnAQrhF4VOFa-iQux6oKw7IFZ5s,6074
+opentelemetry/instrumentation/confluent_kafka/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_instrumentation_confluent_kafka-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_instrumentation_confluent_kafka-0.66b1.dist-info/METADATA,sha256=5X1x-zCv0rSJMe9ERfLcIN9mx-dL7YiTLnJd60HseDA,2056
+opentelemetry_instrumentation_confluent_kafka-0.66b1.dist-info/RECORD,,
+opentelemetry_instrumentation_confluent_kafka-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_instrumentation_confluent_kafka-0.66b1.dist-info/entry_points.txt,sha256=hAIEwx8JI8eFsUgk3ewaMdYw215At11XX-1a4WjAHBY,120
+opentelemetry_instrumentation_confluent_kafka-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

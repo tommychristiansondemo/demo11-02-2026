@@ -1,0 +1,8 @@
+{
+  "app": "npx tsx bin/app.ts",
+  "toolkitStackName": "FRCopilot-CDKToolkit",
+  "context": {
+    "@aws-cdk/core:bootstrapQualifier": "frcopilot",
+    "@aws-cdk/aws-iam:minimizePolicies": true
+  }
+}

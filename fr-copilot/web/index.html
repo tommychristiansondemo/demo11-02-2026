@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FR Copilot</title>
+  <meta name="description" content="FR Copilot: retirement readiness and coverage-gap assistant for financial representatives (synthetic demo data).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b2545'/%3E%3Cpath d='M9 22V10h9M9 16h7M20 22l3-6 3 6' stroke='%2337c4b0' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Sign in -->
+  <main id="login-view" class="login" hidden>
+    <form id="login-form" class="login-card" autocomplete="on">
+      <div class="brand brand-lg"><span class="mark">FR</span><span>FR Copilot</span></div>
+      <p class="muted">Retirement readiness and coverage-gap assistant for financial representatives.</p>
+      <div class="mode-tabs" role="tablist">
+        <button id="mode-signin" class="mode active" type="button" role="tab" aria-selected="true">Sign in</button>
+        <button id="mode-signup" class="mode" type="button" role="tab" aria-selected="false">Create an account</button>
+      </div>
+      <label>Username<input id="username" name="username" autocomplete="username" required maxlength="32"></label>
+      <label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label>
+      <label id="confirm-wrap" hidden>Confirm password<input id="password2" name="password2" type="password" autocomplete="new-password"></label>
+      <p id="signup-help" class="hint" hidden>Pick any username (3-32 letters, digits, <code>.</code> <code>_</code> <code>-</code>) and a password of at least 6 characters. No email or confirmation needed. Create as many IDs as you like; each works here and in Insights.</p>
+      <button id="login-btn" class="btn primary" type="submit">Sign in</button>
+      <p id="login-error" class="error" role="alert" hidden></p>
+      <a class="insights-cta insights-link" href="https://insights.awsteach.com" target="_blank" rel="noopener">
+        <span class="cta-icon" aria-hidden="true">⚙</span>
+        <span><b>Under the hood</b><br><span class="muted small">Ask how FR Copilot was built and explore live logs and LLM reasoning</span></span>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <p class="fineprint">Demo environment. All clients are synthetic. For illustration only, not financial advice.</p>
+    </form>
+  </main>
+
+  <!-- App -->
+  <div id="app-view" class="app" hidden>
+    <header class="topbar">
+      <div class="brand"><span class="mark">FR</span><span>FR Copilot</span><span class="tag">AgentCore demo</span></div>
+      <div class="topbar-right">
+        <button id="model-btn" class="model-chip" type="button" title="LLM routing: choose quality / cost / latency preferences">
+          <span class="dot" aria-hidden="true"></span><span class="lbl">Model</span> <b id="model-name">…</b>
+        </button>
+        <a class="btn ghost insights-link" href="https://insights.awsteach.com" target="_blank" rel="noopener" title="How FR Copilot is built: knowledge chatbot, live logs and LLM reasoning">Under the hood ↗</a>
+        <button id="new-chat" class="btn ghost" type="button" title="Start a new conversation">New chat</button>
+        <button id="toggle-tools" class="btn ghost only-narrow" type="button">Tool calls <span id="tool-badge" class="badge">0</span></button>
+        <span id="whoami" class="who"></span>
+        <button id="logout" class="btn ghost" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="clients" aria-label="Clients">
+        <div class="pane-head">
+          <h2>Clients</h2><span id="client-count" class="muted small"></span>
+        </div>
+        <input id="client-search" class="search" type="search" placeholder="Search name, occupation or ID" aria-label="Search clients">
+        <ul id="client-list" class="client-list" role="listbox"></ul>
+      </aside>
+
+      <section class="chat" aria-label="Conversation">
+        <div id="client-card" class="client-card" hidden></div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <form id="composer" class="composer">
+          <textarea id="prompt" rows="1" placeholder="Pick a client, then ask a question..." aria-label="Message" maxlength="4000"></textarea>
+          <button id="send" class="btn primary" type="submit" disabled>Send</button>
+        </form>
+        <p class="fineprint center">Synthetic data · LLM on Amazon Bedrock (switchable) with Guardrails · For illustration only, not financial advice.</p>
+      </section>
+
+      <aside id="tools-pane" class="tools" aria-label="MCP tool calls">
+        <div class="pane-head"><h2>MCP tool calls</h2><span id="tool-summary" class="muted small"></span></div>
+        <div class="legend">
+          <span class="chip profile">client-profile-mcp</span><span class="chip calc">planning-calc-mcp</span>
+        </div>
+        <ol id="tool-log" class="tool-log"></ol>
+        <p id="tool-empty" class="muted small">Tools the agent calls through the AgentCore Gateway will appear here.</p>
+      </aside>
+    </div>
+  </div>
+
+  <!-- LLM routing panel -->
+  <div id="llm-backdrop" class="backdrop" hidden></div>
+  <aside id="llm-panel" class="llm-panel" role="dialog" aria-modal="true" aria-labelledby="llm-title" hidden>
+    <header class="llm-head">
+      <div>
+        <h2 id="llm-title">LLM routing</h2>
+        <p class="muted small">Amazon Bedrock lets the same agent run on a different model with a configuration change, and no redeploy. Set your priorities, then evaluate. The settings live in AWS AppConfig and are shared by everyone using the app.</p>
+      </div>
+      <button id="llm-close" class="icon-btn" type="button" aria-label="Close">✕</button>
+    </header>
+    <section class="weights">
+      <div class="slider-row q"><label for="w-quality">Quality</label><input id="w-quality" type="range" min="0" max="100" step="1"><output id="o-quality">50%</output></div>
+      <div class="slider-row c"><label for="w-cost">Cost</label><input id="w-cost" type="range" min="0" max="100" step="1"><output id="o-cost">25%</output></div>
+      <div class="slider-row l"><label for="w-latency">Latency</label><input id="w-latency" type="range" min="0" max="100" step="1"><output id="o-latency">25%</output></div>
+      <div class="mixbar" aria-hidden="true"><span id="mix-q"></span><span id="mix-c"></span><span id="mix-l"></span></div>
+      <div class="weights-foot">
+        <span class="muted small">Always totals <b>100%</b>. Moving one slider rebalances the other two.</span>
+        <div class="weights-actions">
+          <button id="llm-reset" class="btn link" type="button">Reset 50/25/25</button>
+          <button id="llm-apply" class="btn primary" type="button">Evaluate &amp; apply</button>
+        </div>
+      </div>
+      <p id="llm-preview" class="preview small"></p>
+    </section>
+    <div id="llm-decision" class="decision" hidden></div>
+    <section>
+      <div class="rank-head"><h3>Ranking for the <span id="rank-basis">current settings</span></h3><span id="llm-status" class="muted small"></span></div>
+      <div class="rank-wrap"><table class="rank">
+        <thead><tr><th>#</th><th>Model</th><th class="r" title="Weighted score 0-100">Score</th><th class="r">Quality</th><th class="r">Cost / question</th><th class="r">Latency</th></tr></thead>
+        <tbody id="rank-body"></tbody>
+      </table></div>
+      <p class="muted small method">Scores come from benchmarking all 8 models on the real FR Copilot task: the C-007 question, the same tools, prompt and guardrail, graded by a 100-point rubric. <b>Quality</b> is 60% of that task score plus 40% general capability. <b>Cost</b> is measured tokens × Bedrock list price. <b>Latency</b> is the measured end-to-end time. Models scoring below <span id="elig-min">80</span>/100 on the task are <span class="inelig-tag">not eligible</span> for live traffic.</p>
+    </section>
+  </aside>
+</body>
+</html>

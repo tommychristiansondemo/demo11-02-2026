@@ -1,0 +1,13 @@
+opentelemetry/processor/baggage/__init__.py,sha256=kRAKVd6Ji8DPSQDjCNGS6tMevNvaQtOJVF7HfWB-64s,375
+opentelemetry/processor/baggage/__pycache__/__init__.cpython-312.pyc,,
+opentelemetry/processor/baggage/__pycache__/log_processor.cpython-312.pyc,,
+opentelemetry/processor/baggage/__pycache__/processor.cpython-312.pyc,,
+opentelemetry/processor/baggage/__pycache__/version.cpython-312.pyc,,
+opentelemetry/processor/baggage/log_processor.py,sha256=LsmYHVwd3lwi1JyGie5q0pJOb42t6cmUZluAWrMKpNo,2427
+opentelemetry/processor/baggage/processor.py,sha256=yUQ2OYlTpWAcL0TfKdvV-YEBH5uGItEbsyfpwgHrQ7s,2157
+opentelemetry/processor/baggage/version.py,sha256=aMVTEQ1vsfaCdCt8Yb_XGFq9ojH9GmqhS5KpGQ84WwM,100
+opentelemetry_processor_baggage-0.66b1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+opentelemetry_processor_baggage-0.66b1.dist-info/METADATA,sha256=iXx-BhJQ2BymbWtVn5IhHnO0A8oK2aw4sVvrKHYiIpU,4729
+opentelemetry_processor_baggage-0.66b1.dist-info/RECORD,,
+opentelemetry_processor_baggage-0.66b1.dist-info/WHEEL,sha256=W3fkpkm7-wf9vBI5Z-7s0eWkeM-spu78I8Neb98DeEg,87
+opentelemetry_processor_baggage-0.66b1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

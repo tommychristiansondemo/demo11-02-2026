@@ -1,0 +1,2643 @@
+{
+ "Description": "FR Copilot Insights - separate \"under the hood\" app: knowledge-file chatbot + live logs and LLM reasoning",
+ "Resources": {
+  "KnowledgeB6F5C7B3": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": [
+      {
+       "ServerSideEncryptionByDefault": {
+        "SSEAlgorithm": "AES256"
+       }
+      }
+     ]
+    },
+    "BucketName": "frcopilot-knowledge-154833006816",
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    },
+    "Tags": [
+     {
+      "Key": "aws-cdk:auto-delete-objects",
+      "Value": "true"
+     },
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "VersioningConfiguration": {
+     "Status": "Enabled"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Knowledge/Resource"
+   }
+  },
+  "KnowledgePolicyC5D0F8C5": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "KnowledgeB6F5C7B3"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:*",
+       "Condition": {
+        "Bool": {
+         "aws:SecureTransport": "false"
+        }
+       },
+       "Effect": "Deny",
+       "Principal": {
+        "AWS": "*"
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "KnowledgeB6F5C7B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "KnowledgeB6F5C7B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:PutBucketPolicy"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": {
+         "Fn::GetAtt": [
+          "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+          "Arn"
+         ]
+        }
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "KnowledgeB6F5C7B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "KnowledgeB6F5C7B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Knowledge/Policy/Resource"
+   }
+  },
+  "KnowledgeAutoDeleteObjectsCustomResource038FDDA7": {
+   "Type": "Custom::S3AutoDeleteObjects",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+      "Arn"
+     ]
+    },
+    "BucketName": {
+     "Ref": "KnowledgeB6F5C7B3"
+    }
+   },
+   "DependsOn": [
+    "KnowledgePolicyC5D0F8C5"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Knowledge/AutoDeleteObjectsCustomResource/Default"
+   }
+  },
+  "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role"
+   }
+  },
+  "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-frcopilot-assets-154833006816-us-east-1",
+     "S3Key": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs24.x",
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Lambda function for auto-deleting objects in ",
+       {
+        "Ref": "KnowledgeB6F5C7B3"
+       },
+       " S3 bucket."
+      ]
+     ]
+    }
+   },
+   "DependsOn": [
+    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+    "aws:asset:property": "Code"
+   }
+  },
+  "InvocationLogsCD36EA0A": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/aws/bedrock/frcopilot-model-invocations",
+    "RetentionInDays": 14,
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLogs/Resource"
+   }
+  },
+  "InvocationLargeBFE03F38": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": [
+      {
+       "ServerSideEncryptionByDefault": {
+        "SSEAlgorithm": "AES256"
+       }
+      }
+     ]
+    },
+    "BucketName": "frcopilot-llm-invocations-154833006816",
+    "LifecycleConfiguration": {
+     "Rules": [
+      {
+       "ExpirationInDays": 14,
+       "Status": "Enabled"
+      }
+     ]
+    },
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    },
+    "Tags": [
+     {
+      "Key": "aws-cdk:auto-delete-objects",
+      "Value": "true"
+     },
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLarge/Resource"
+   }
+  },
+  "InvocationLargePolicyE071D1D5": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "InvocationLargeBFE03F38"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:*",
+       "Condition": {
+        "Bool": {
+         "aws:SecureTransport": "false"
+        }
+       },
+       "Effect": "Deny",
+       "Principal": {
+        "AWS": "*"
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "InvocationLargeBFE03F38",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "InvocationLargeBFE03F38",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:PutBucketPolicy"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": {
+         "Fn::GetAtt": [
+          "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+          "Arn"
+         ]
+        }
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "InvocationLargeBFE03F38",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "InvocationLargeBFE03F38",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "s3:PutObject",
+       "Condition": {
+        "StringEquals": {
+         "aws:SourceAccount": "154833006816"
+        },
+        "ArnLike": {
+         "aws:SourceArn": "arn:aws:bedrock:us-east-1:154833006816:*"
+        }
+       },
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "bedrock.amazonaws.com"
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "InvocationLargeBFE03F38",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       },
+       "Sid": "BedrockLargeInvocationPayloads"
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLarge/Policy/Resource"
+   }
+  },
+  "InvocationLargeAutoDeleteObjectsCustomResourceAE54201F": {
+   "Type": "Custom::S3AutoDeleteObjects",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+      "Arn"
+     ]
+    },
+    "BucketName": {
+     "Ref": "InvocationLargeBFE03F38"
+    }
+   },
+   "DependsOn": [
+    "InvocationLargePolicyE071D1D5"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLarge/AutoDeleteObjectsCustomResource/Default"
+   }
+  },
+  "InvocationLoggingRole49D37B50": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Condition": {
+        "StringEquals": {
+         "aws:SourceAccount": "154833006816"
+        },
+        "ArnLike": {
+         "aws:SourceArn": "arn:aws:bedrock:us-east-1:154833006816:*"
+        }
+       },
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "bedrock.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Description": "Lets Amazon Bedrock write model-invocation logs for the FR Copilot class demo",
+    "RoleName": "frcopilot-bedrock-invocation-logging-us-east-1",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLoggingRole/Resource"
+   }
+  },
+  "InvocationLoggingRoleDefaultPolicyD560A79D": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "InvocationLogsCD36EA0A",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "InvocationLogsCD36EA0A",
+             "Arn"
+            ]
+           },
+           ":log-stream:*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "s3:PutObject",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "InvocationLargeBFE03F38",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "InvocationLoggingRoleDefaultPolicyD560A79D",
+    "Roles": [
+     {
+      "Ref": "InvocationLoggingRole49D37B50"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLoggingRole/DefaultPolicy/Resource"
+   }
+  },
+  "InvocationLoggingCrLogs30D101B9": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/aws/lambda/frcopilot-insights-invocation-logging-cr",
+    "RetentionInDays": 1,
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InvocationLoggingCrLogs/Resource"
+   }
+  },
+  "ModelInvocationLogging43B0C1A6": {
+   "Type": "Custom::BedrockModelInvocationLogging",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+      "Arn"
+     ]
+    },
+    "Create": {
+     "Fn::Join": [
+      "",
+      [
+       "{\"service\":\"Bedrock\",\"action\":\"PutModelInvocationLoggingConfiguration\",\"parameters\":{\"loggingConfig\":{\"cloudWatchConfig\":{\"logGroupName\":\"",
+       {
+        "Ref": "InvocationLogsCD36EA0A"
+       },
+       "\",\"roleArn\":\"",
+       {
+        "Fn::GetAtt": [
+         "InvocationLoggingRole49D37B50",
+         "Arn"
+        ]
+       },
+       "\",\"largeDataDeliveryS3Config\":{\"bucketName\":\"",
+       {
+        "Ref": "InvocationLargeBFE03F38"
+       },
+       "\",\"keyPrefix\":\"large\"}},\"textDataDeliveryEnabled\":true,\"imageDataDeliveryEnabled\":false,\"embeddingDataDeliveryEnabled\":false}},\"physicalResourceId\":{\"id\":\"frcopilot-model-invocation-logging\"}}"
+      ]
+     ]
+    },
+    "Update": {
+     "Fn::Join": [
+      "",
+      [
+       "{\"service\":\"Bedrock\",\"action\":\"PutModelInvocationLoggingConfiguration\",\"parameters\":{\"loggingConfig\":{\"cloudWatchConfig\":{\"logGroupName\":\"",
+       {
+        "Ref": "InvocationLogsCD36EA0A"
+       },
+       "\",\"roleArn\":\"",
+       {
+        "Fn::GetAtt": [
+         "InvocationLoggingRole49D37B50",
+         "Arn"
+        ]
+       },
+       "\",\"largeDataDeliveryS3Config\":{\"bucketName\":\"",
+       {
+        "Ref": "InvocationLargeBFE03F38"
+       },
+       "\",\"keyPrefix\":\"large\"}},\"textDataDeliveryEnabled\":true,\"imageDataDeliveryEnabled\":false,\"embeddingDataDeliveryEnabled\":false}},\"physicalResourceId\":{\"id\":\"frcopilot-model-invocation-logging\"}}"
+      ]
+     ]
+    },
+    "Delete": "{\"service\":\"Bedrock\",\"action\":\"DeleteModelInvocationLoggingConfiguration\"}",
+    "InstallLatestAwsSdk": false
+   },
+   "DependsOn": [
+    "InvocationLargeAutoDeleteObjectsCustomResourceAE54201F",
+    "InvocationLargePolicyE071D1D5",
+    "InvocationLargeBFE03F38",
+    "InvocationLoggingRoleDefaultPolicyD560A79D",
+    "InvocationLoggingRole49D37B50",
+    "InvocationLogsCD36EA0A",
+    "ModelInvocationLoggingCustomResourcePolicyDE752DD3"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/ModelInvocationLogging/Resource/Default"
+   }
+  },
+  "ModelInvocationLoggingCustomResourcePolicyDE752DD3": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "bedrock:DeleteModelInvocationLoggingConfiguration",
+        "bedrock:PutModelInvocationLoggingConfiguration"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "iam:PassRole",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "InvocationLoggingRole49D37B50",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ModelInvocationLoggingCustomResourcePolicyDE752DD3",
+    "Roles": [
+     {
+      "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+     }
+    ]
+   },
+   "DependsOn": [
+    "InvocationLargeAutoDeleteObjectsCustomResourceAE54201F",
+    "InvocationLargePolicyE071D1D5",
+    "InvocationLargeBFE03F38",
+    "InvocationLoggingRoleDefaultPolicyD560A79D",
+    "InvocationLoggingRole49D37B50",
+    "InvocationLogsCD36EA0A"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/ModelInvocationLogging/CustomResourcePolicy/Resource"
+   }
+  },
+  "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource"
+   }
+  },
+  "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-frcopilot-assets-154833006816-us-east-1",
+     "S3Key": "9b8fce7ae7f25ef82fdbaf6b72523b99d0875c0c9c826642819fb51f11d9b125.zip"
+    },
+    "Handler": "index.handler",
+    "LoggingConfig": {
+     "LogGroup": {
+      "Ref": "InvocationLoggingCrLogs30D101B9"
+     }
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs24.x",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "Timeout": 120
+   },
+   "DependsOn": [
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/AWS679f53fac002430cb0da5b7982bd2287/Resource",
+    "aws:asset:path": "asset.9b8fce7ae7f25ef82fdbaf6b72523b99d0875c0c9c826642819fb51f11d9b125",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "ChatRole3FC23F62": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Description": "FR Copilot Insights chatbot Lambda: read-only access to the knowledge file, logs, inventory and metrics",
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/AWSXRayDaemonWriteAccess"
+       ]
+      ]
+     }
+    ],
+    "RoleName": "frcopilot-insights-chat-us-east-1",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/ChatRole/Resource"
+   }
+  },
+  "ChatRoleDefaultPolicy76D60B67": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatLogs086E826C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatLogs086E826C",
+             "Arn"
+            ]
+           },
+           ":*"
+          ]
+         ]
+        }
+       ],
+       "Sid": "OwnLogs"
+      },
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "KnowledgeB6F5C7B3",
+            "Arn"
+           ]
+          },
+          "/projectknowledge.md"
+         ]
+        ]
+       },
+       "Sid": "ReadKnowledge"
+      },
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "InvocationLargeBFE03F38",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       },
+       "Sid": "ReadLargeInvocationPayloads"
+      },
+      {
+       "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        "arn:aws:bedrock:*::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0",
+        "arn:aws:bedrock:us-east-1:154833006816:inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0"
+       ],
+       "Sid": "InvokeChatModel"
+      },
+      {
+       "Action": [
+        "logs:FilterLogEvents",
+        "logs:StartQuery"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock-agentcore/runtimes/client_profile_mcp-*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock-agentcore/runtimes/client_profile_mcp-*:*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock-agentcore/runtimes/frcopilot_agent-*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock-agentcore/runtimes/frcopilot_agent-*:*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock-agentcore/runtimes/planning_calc_mcp-*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock-agentcore/runtimes/planning_calc_mcp-*:*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock/frcopilot-model-invocations",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/bedrock/frcopilot-model-invocations:*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/lambda/frcopilot-*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/lambda/frcopilot-*:*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/vendedlogs/bedrock-agentcore/frcopilot-*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:/aws/vendedlogs/bedrock-agentcore/frcopilot-*:*",
+        "arn:aws:logs:us-east-1:154833006816:log-group:aws/spans",
+        "arn:aws:logs:us-east-1:154833006816:log-group:aws/spans:*"
+       ],
+       "Sid": "QueryDemoLogs"
+      },
+      {
+       "Action": [
+        "logs:DescribeLogGroups",
+        "logs:GetQueryResults",
+        "logs:StopQuery"
+       ],
+       "Effect": "Allow",
+       "Resource": "*",
+       "Sid": "QueryResults"
+      },
+      {
+       "Action": [
+        "cloudformation:DescribeStacks",
+        "cloudformation:ListStackResources"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        "arn:aws:cloudformation:us-east-1:154833006816:stack/FRCopilot/*",
+        "arn:aws:cloudformation:us-east-1:154833006816:stack/FRCopilotInsights/*"
+       ],
+       "Sid": "Inventory"
+      },
+      {
+       "Action": "cloudwatch:GetMetricData",
+       "Effect": "Allow",
+       "Resource": "*",
+       "Sid": "Metrics"
+      },
+      {
+       "Action": [
+        "appconfig:GetHostedConfigurationVersion",
+        "appconfig:ListDeployments",
+        "appconfig:ListHostedConfigurationVersions"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:appconfig:us-east-1:154833006816:application/",
+           {
+            "Fn::ImportValue": "FRCopilot:ExportsOutputRefAppConfigApp1B652AAA"
+           },
+           "/*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:appconfig:us-east-1:154833006816:application/",
+           {
+            "Fn::ImportValue": "FRCopilot:ExportsOutputRefAppConfigApp1B652AAA"
+           }
+          ]
+         ]
+        }
+       ],
+       "Sid": "ReadLlmRouting"
+      },
+      {
+       "Action": [
+        "xray:PutTelemetryRecords",
+        "xray:PutTraceSegments"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ChatRoleDefaultPolicy76D60B67",
+    "Roles": [
+     {
+      "Ref": "ChatRole3FC23F62"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/ChatRole/DefaultPolicy/Resource"
+   }
+  },
+  "ChatLogs086E826C": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/aws/lambda/frcopilot-insights-chat",
+    "RetentionInDays": 14,
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/ChatLogs/Resource"
+   }
+  },
+  "Chat26DEB33F": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "arm64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-frcopilot-assets-154833006816-us-east-1",
+     "S3Key": "ae63a15632d06b1268da2b9446a25fff11a5a7c6cd7ae9ce1ca2b918edb86eaa.zip"
+    },
+    "Description": "FR Copilot Insights chatbot: Claude on Bedrock + knowledge file + live logs/reasoning/inventory tools",
+    "Environment": {
+     "Variables": {
+      "MODEL_ID": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "APP_MODEL_ID": "us.anthropic.claude-sonnet-4-6",
+      "KNOWLEDGE_BUCKET": {
+       "Ref": "KnowledgeB6F5C7B3"
+      },
+      "KNOWLEDGE_KEY": "projectknowledge.md",
+      "APPCONFIG_APP_ID": {
+       "Fn::ImportValue": "FRCopilot:ExportsOutputRefAppConfigApp1B652AAA"
+      },
+      "APPCONFIG_ENV_ID": {
+       "Fn::ImportValue": "FRCopilot:ExportsOutputRefAppConfigEnv191C91EB"
+      },
+      "APPCONFIG_PROFILE_ID": {
+       "Fn::ImportValue": "FRCopilot:ExportsOutputRefLlmProfile38435F63"
+      },
+      "INVOCATION_LOG_GROUP": "/aws/bedrock/frcopilot-model-invocations",
+      "AGENT_ROLE_NAME": "frcopilot-agent-us-east-1",
+      "CHAT_ROLE_NAME": "frcopilot-insights-chat-us-east-1"
+     }
+    },
+    "FunctionName": "frcopilot-insights-chat",
+    "Handler": "index.handler",
+    "LoggingConfig": {
+     "LogGroup": {
+      "Ref": "ChatLogs086E826C"
+     }
+    },
+    "MemorySize": 512,
+    "Role": {
+     "Fn::GetAtt": [
+      "ChatRole3FC23F62",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs22.x",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "Timeout": 300,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "ChatRoleDefaultPolicy76D60B67",
+    "ChatRole3FC23F62"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Chat/Resource",
+    "aws:asset:path": "asset.ae63a15632d06b1268da2b9446a25fff11a5a7c6cd7ae9ce1ca2b918edb86eaa",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "KnowledgeLogs09CBB1B8": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": "/aws/lambda/frcopilot-insights-knowledge",
+    "RetentionInDays": 14,
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/KnowledgeLogs/Resource"
+   }
+  },
+  "KnowledgeApiServiceRoleC20BF876": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/KnowledgeApi/ServiceRole/Resource"
+   }
+  },
+  "KnowledgeApiServiceRoleDefaultPolicy1916C738": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTelemetryRecords",
+        "xray:PutTraceSegments"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "KnowledgeB6F5C7B3",
+            "Arn"
+           ]
+          },
+          "/projectknowledge.md"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "s3:ListBucketVersions",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "KnowledgeB6F5C7B3",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "KnowledgeApiServiceRoleDefaultPolicy1916C738",
+    "Roles": [
+     {
+      "Ref": "KnowledgeApiServiceRoleC20BF876"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/KnowledgeApi/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "KnowledgeApi1802B74A": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "arm64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-frcopilot-assets-154833006816-us-east-1",
+     "S3Key": "10b3c15d298de179ea10b60bae5e72331dd432eacfa24662d50a33fcf42e9a49.zip"
+    },
+    "Description": "Serves projectknowledge.md (and its version history) to the Insights UI",
+    "Environment": {
+     "Variables": {
+      "KNOWLEDGE_BUCKET": {
+       "Ref": "KnowledgeB6F5C7B3"
+      },
+      "KNOWLEDGE_KEY": "projectknowledge.md"
+     }
+    },
+    "FunctionName": "frcopilot-insights-knowledge",
+    "Handler": "index.handler",
+    "LoggingConfig": {
+     "LogGroup": {
+      "Ref": "KnowledgeLogs09CBB1B8"
+     }
+    },
+    "MemorySize": 256,
+    "Role": {
+     "Fn::GetAtt": [
+      "KnowledgeApiServiceRoleC20BF876",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.12",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "KnowledgeApiServiceRoleDefaultPolicy1916C738",
+    "KnowledgeApiServiceRoleC20BF876"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/KnowledgeApi/Resource",
+    "aws:asset:path": "asset.10b3c15d298de179ea10b60bae5e72331dd432eacfa24662d50a33fcf42e9a49",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "InsightsWebD6A97533": {
+   "Type": "AWS::Cognito::UserPoolClient",
+   "Properties": {
+    "AccessTokenValidity": 60,
+    "AllowedOAuthFlowsUserPoolClient": false,
+    "ClientName": "frcopilot-insights-web",
+    "EnableTokenRevocation": true,
+    "ExplicitAuthFlows": [
+     "ALLOW_USER_PASSWORD_AUTH",
+     "ALLOW_USER_SRP_AUTH",
+     "ALLOW_REFRESH_TOKEN_AUTH"
+    ],
+    "GenerateSecret": false,
+    "IdTokenValidity": 60,
+    "PreventUserExistenceErrors": "ENABLED",
+    "RefreshTokenValidity": 720,
+    "SupportedIdentityProviders": [
+     "COGNITO"
+    ],
+    "TokenValidityUnits": {
+     "AccessToken": "minutes",
+     "IdToken": "minutes",
+     "RefreshToken": "minutes"
+    },
+    "UserPoolId": {
+     "Fn::ImportValue": "FRCopilot:ExportsOutputRefRepsC0120BBE43A91D44"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InsightsWeb/Resource"
+   }
+  },
+  "ApiF70053CD": {
+   "Type": "AWS::ApiGateway::RestApi",
+   "Properties": {
+    "Description": "FR Copilot Insights API (served same-origin through CloudFront /api/*)",
+    "EndpointConfiguration": {
+     "Types": [
+      "REGIONAL"
+     ]
+    },
+    "Name": "frcopilot-insights-api",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Resource"
+   }
+  },
+  "ApiDeploymentB17BE62Da19ad300e63033e35991dfc363d8cf21": {
+   "Type": "AWS::ApiGateway::Deployment",
+   "Properties": {
+    "Description": "FR Copilot Insights API (served same-origin through CloudFront /api/*)",
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    }
+   },
+   "DependsOn": [
+    "ApiapichatPOST70239852",
+    "Apiapichat32253773",
+    "ApiapiknowledgeGET8CDDCD36",
+    "Apiapiknowledge7EA5D9B4",
+    "Apiapi0E601135"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Deployment/Resource",
+    "aws:cdk:do-not-refactor": true
+   }
+  },
+  "ApiDeploymentStageprod3EB9684E": {
+   "Type": "AWS::ApiGateway::Stage",
+   "Properties": {
+    "DeploymentId": {
+     "Ref": "ApiDeploymentB17BE62Da19ad300e63033e35991dfc363d8cf21"
+    },
+    "MethodSettings": [
+     {
+      "DataTraceEnabled": false,
+      "HttpMethod": "*",
+      "ResourcePath": "/*",
+      "ThrottlingBurstLimit": 20,
+      "ThrottlingRateLimit": 10
+     }
+    ],
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    },
+    "StageName": "prod",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "TracingEnabled": true
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/DeploymentStage.prod/Resource"
+   }
+  },
+  "Apiapi0E601135": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Fn::GetAtt": [
+      "ApiF70053CD",
+      "RootResourceId"
+     ]
+    },
+    "PathPart": "api",
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/Resource"
+   }
+  },
+  "Apiapichat32253773": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "Apiapi0E601135"
+    },
+    "PathPart": "chat",
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/chat/Resource"
+   }
+  },
+  "ApiapichatPOSTApiPermissionFRCopilotInsightsApi1A94794CPOSTapichat8CD0EE41": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "Chat26DEB33F",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:154833006816:",
+       {
+        "Ref": "ApiF70053CD"
+       },
+       "/",
+       {
+        "Ref": "ApiDeploymentStageprod3EB9684E"
+       },
+       "/POST/api/chat"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/chat/POST/ApiPermission.FRCopilotInsightsApi1A94794C.POST..api.chat"
+   }
+  },
+  "ApiapichatPOSTApiPermissionTestFRCopilotInsightsApi1A94794CPOSTapichatAB1A6CAD": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "Chat26DEB33F",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:154833006816:",
+       {
+        "Ref": "ApiF70053CD"
+       },
+       "/test-invoke-stage/POST/api/chat"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/chat/POST/ApiPermission.Test.FRCopilotInsightsApi1A94794C.POST..api.chat"
+   }
+  },
+  "ApiapichatPOST70239852": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "AuthorizationScopes": [
+     "aws.cognito.signin.user.admin"
+    ],
+    "AuthorizationType": "COGNITO_USER_POOLS",
+    "AuthorizerId": {
+     "Ref": "AuthorizerBD825682"
+    },
+    "HttpMethod": "POST",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "ResponseTransferMode": "STREAM",
+     "TimeoutInMillis": 300000,
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:us-east-1:lambda:path/2021-11-15/functions/",
+        {
+         "Fn::GetAtt": [
+          "Chat26DEB33F",
+          "Arn"
+         ]
+        },
+        "/response-streaming-invocations"
+       ]
+      ]
+     }
+    },
+    "ResourceId": {
+     "Ref": "Apiapichat32253773"
+    },
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/chat/POST/Resource"
+   }
+  },
+  "Apiapiknowledge7EA5D9B4": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "Apiapi0E601135"
+    },
+    "PathPart": "knowledge",
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/knowledge/Resource"
+   }
+  },
+  "ApiapiknowledgeGETApiPermissionFRCopilotInsightsApi1A94794CGETapiknowledge20258601": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "KnowledgeApi1802B74A",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:154833006816:",
+       {
+        "Ref": "ApiF70053CD"
+       },
+       "/",
+       {
+        "Ref": "ApiDeploymentStageprod3EB9684E"
+       },
+       "/GET/api/knowledge"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/knowledge/GET/ApiPermission.FRCopilotInsightsApi1A94794C.GET..api.knowledge"
+   }
+  },
+  "ApiapiknowledgeGETApiPermissionTestFRCopilotInsightsApi1A94794CGETapiknowledgeDFBD9D30": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "KnowledgeApi1802B74A",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:154833006816:",
+       {
+        "Ref": "ApiF70053CD"
+       },
+       "/test-invoke-stage/GET/api/knowledge"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/knowledge/GET/ApiPermission.Test.FRCopilotInsightsApi1A94794C.GET..api.knowledge"
+   }
+  },
+  "ApiapiknowledgeGET8CDDCD36": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "AuthorizationScopes": [
+     "aws.cognito.signin.user.admin"
+    ],
+    "AuthorizationType": "COGNITO_USER_POOLS",
+    "AuthorizerId": {
+     "Ref": "AuthorizerBD825682"
+    },
+    "HttpMethod": "GET",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "KnowledgeApi1802B74A",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    },
+    "ResourceId": {
+     "Ref": "Apiapiknowledge7EA5D9B4"
+    },
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Api/Default/api/knowledge/GET/Resource"
+   }
+  },
+  "AuthorizerBD825682": {
+   "Type": "AWS::ApiGateway::Authorizer",
+   "Properties": {
+    "IdentitySource": "method.request.header.Authorization",
+    "Name": "frcopilot-insights",
+    "ProviderARNs": [
+     {
+      "Fn::ImportValue": "FRCopilot:ExportsOutputFnGetAttRepsC0120BBEArn0BA4590C"
+     }
+    ],
+    "RestApiId": {
+     "Ref": "ApiF70053CD"
+    },
+    "Type": "COGNITO_USER_POOLS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Authorizer/Resource"
+   }
+  },
+  "Cert5C9FAEC1": {
+   "Type": "AWS::CertificateManager::Certificate",
+   "Properties": {
+    "DomainName": "insights.awsteach.com",
+    "DomainValidationOptions": [
+     {
+      "DomainName": "insights.awsteach.com",
+      "HostedZoneId": "Z02882605B7GUS0L3VHX"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "FRCopilotInsights/Cert"
+     },
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "ValidationMethod": "DNS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Cert/Resource"
+   }
+  },
+  "SiteE53D7754": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": [
+      {
+       "ServerSideEncryptionByDefault": {
+        "SSEAlgorithm": "AES256"
+       }
+      }
+     ]
+    },
+    "BucketName": "frcopilot-insights-web-154833006816",
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    },
+    "Tags": [
+     {
+      "Key": "aws-cdk:auto-delete-objects",
+      "Value": "true"
+     },
+     {
+      "Key": "aws-cdk:cr-owned:43d56038",
+      "Value": "true"
+     },
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Site/Resource"
+   }
+  },
+  "SitePolicyC4000D7D": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "SiteE53D7754"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:*",
+       "Condition": {
+        "Bool": {
+         "aws:SecureTransport": "false"
+        }
+       },
+       "Effect": "Deny",
+       "Principal": {
+        "AWS": "*"
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "SiteE53D7754",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "SiteE53D7754",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:PutBucketPolicy"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": {
+         "Fn::GetAtt": [
+          "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+          "Arn"
+         ]
+        }
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "SiteE53D7754",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "SiteE53D7754",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "s3:GetObject",
+       "Condition": {
+        "StringEquals": {
+         "AWS:SourceArn": {
+          "Fn::Join": [
+           "",
+           [
+            "arn:",
+            {
+             "Ref": "AWS::Partition"
+            },
+            ":cloudfront::",
+            {
+             "Ref": "AWS::AccountId"
+            },
+            ":distribution/",
+            {
+             "Ref": "Cdn9963B1AD"
+            }
+           ]
+          ]
+         }
+        }
+       },
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "cloudfront.amazonaws.com"
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "SiteE53D7754",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Site/Policy/Resource"
+   }
+  },
+  "SiteAutoDeleteObjectsCustomResourceBFAA9B42": {
+   "Type": "Custom::S3AutoDeleteObjects",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+      "Arn"
+     ]
+    },
+    "BucketName": {
+     "Ref": "SiteE53D7754"
+    }
+   },
+   "DependsOn": [
+    "SitePolicyC4000D7D"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Site/AutoDeleteObjectsCustomResource/Default"
+   }
+  },
+  "SecurityHeadersE66B69D3": {
+   "Type": "AWS::CloudFront::ResponseHeadersPolicy",
+   "Properties": {
+    "ResponseHeadersPolicyConfig": {
+     "Name": "frcopilot-insights-security-headers",
+     "SecurityHeadersConfig": {
+      "ContentSecurityPolicy": {
+       "ContentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cognito-idp.us-east-1.amazonaws.com; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+       "Override": true
+      },
+      "ContentTypeOptions": {
+       "Override": true
+      },
+      "FrameOptions": {
+       "FrameOption": "DENY",
+       "Override": true
+      },
+      "ReferrerPolicy": {
+       "Override": true,
+       "ReferrerPolicy": "strict-origin-when-cross-origin"
+      },
+      "StrictTransportSecurity": {
+       "AccessControlMaxAgeSec": 31536000,
+       "IncludeSubdomains": false,
+       "Override": true
+      }
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/SecurityHeaders/Resource"
+   }
+  },
+  "CdnOrigin1S3OriginAccessControl6AC0AEFC": {
+   "Type": "AWS::CloudFront::OriginAccessControl",
+   "Properties": {
+    "OriginAccessControlConfig": {
+     "Name": "FRCopilotInsightsCdnOrigin1S3OriginAccessControl054D2F82",
+     "OriginAccessControlOriginType": "s3",
+     "SigningBehavior": "always",
+     "SigningProtocol": "sigv4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Cdn/Origin1/S3OriginAccessControl/Resource"
+   }
+  },
+  "Cdn9963B1AD": {
+   "Type": "AWS::CloudFront::Distribution",
+   "Properties": {
+    "DistributionConfig": {
+     "Aliases": [
+      "insights.awsteach.com"
+     ],
+     "CacheBehaviors": [
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS",
+        "PUT",
+        "PATCH",
+        "POST",
+        "DELETE"
+       ],
+       "CachePolicyId": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+       "Compress": true,
+       "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+       "PathPattern": "/api/*",
+       "ResponseHeadersPolicyId": {
+        "Ref": "SecurityHeadersE66B69D3"
+       },
+       "TargetOriginId": "FRCopilotInsightsCdnOrigin2EE300C0D",
+       "ViewerProtocolPolicy": "https-only"
+      }
+     ],
+     "Comment": "FR Copilot Insights web + API",
+     "DefaultCacheBehavior": {
+      "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+      "Compress": true,
+      "ResponseHeadersPolicyId": {
+       "Ref": "SecurityHeadersE66B69D3"
+      },
+      "TargetOriginId": "FRCopilotInsightsCdnOrigin1A6F450BF",
+      "ViewerProtocolPolicy": "redirect-to-https"
+     },
+     "DefaultRootObject": "index.html",
+     "Enabled": true,
+     "HttpVersion": "http2and3",
+     "IPV6Enabled": true,
+     "Origins": [
+      {
+       "DomainName": {
+        "Fn::GetAtt": [
+         "SiteE53D7754",
+         "RegionalDomainName"
+        ]
+       },
+       "Id": "FRCopilotInsightsCdnOrigin1A6F450BF",
+       "OriginAccessControlId": {
+        "Fn::GetAtt": [
+         "CdnOrigin1S3OriginAccessControl6AC0AEFC",
+         "Id"
+        ]
+       },
+       "S3OriginConfig": {
+        "OriginAccessIdentity": ""
+       }
+      },
+      {
+       "CustomOriginConfig": {
+        "OriginProtocolPolicy": "https-only",
+        "OriginReadTimeout": 60,
+        "OriginSSLProtocols": [
+         "TLSv1.2"
+        ]
+       },
+       "DomainName": {
+        "Fn::Select": [
+         2,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Join": [
+             "",
+             [
+              "https://",
+              {
+               "Ref": "ApiF70053CD"
+              },
+              ".execute-api.us-east-1.",
+              {
+               "Ref": "AWS::URLSuffix"
+              },
+              "/",
+              {
+               "Ref": "ApiDeploymentStageprod3EB9684E"
+              },
+              "/"
+             ]
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "Id": "FRCopilotInsightsCdnOrigin2EE300C0D",
+       "OriginPath": {
+        "Fn::Join": [
+         "",
+         [
+          "/",
+          {
+           "Fn::Select": [
+            3,
+            {
+             "Fn::Split": [
+              "/",
+              {
+               "Fn::Join": [
+                "",
+                [
+                 "https://",
+                 {
+                  "Ref": "ApiF70053CD"
+                 },
+                 ".execute-api.us-east-1.",
+                 {
+                  "Ref": "AWS::URLSuffix"
+                 },
+                 "/",
+                 {
+                  "Ref": "ApiDeploymentStageprod3EB9684E"
+                 },
+                 "/"
+                ]
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        ]
+       }
+      }
+     ],
+     "PriceClass": "PriceClass_100",
+     "ViewerCertificate": {
+      "AcmCertificateArn": {
+       "Ref": "Cert5C9FAEC1"
+      },
+      "MinimumProtocolVersion": "TLSv1.2_2021",
+      "SslSupportMethod": "sni-only"
+     }
+    },
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Cdn/Resource"
+   }
+  },
+  "InsightsA9AA0988C": {
+   "Type": "AWS::Route53::RecordSet",
+   "Properties": {
+    "AliasTarget": {
+     "DNSName": {
+      "Fn::GetAtt": [
+       "Cdn9963B1AD",
+       "DomainName"
+      ]
+     },
+     "HostedZoneId": {
+      "Fn::FindInMap": [
+       "AWSCloudFrontPartitionHostedZoneIdMap",
+       {
+        "Ref": "AWS::Partition"
+       },
+       "zoneId"
+      ]
+     }
+    },
+    "HostedZoneId": "Z02882605B7GUS0L3VHX",
+    "Name": "insights.awsteach.com.",
+    "Type": "A"
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InsightsA/Resource"
+   }
+  },
+  "InsightsAAAAD03E7932": {
+   "Type": "AWS::Route53::RecordSet",
+   "Properties": {
+    "AliasTarget": {
+     "DNSName": {
+      "Fn::GetAtt": [
+       "Cdn9963B1AD",
+       "DomainName"
+      ]
+     },
+     "HostedZoneId": {
+      "Fn::FindInMap": [
+       "AWSCloudFrontPartitionHostedZoneIdMap",
+       {
+        "Ref": "AWS::Partition"
+       },
+       "zoneId"
+      ]
+     }
+    },
+    "HostedZoneId": "Z02882605B7GUS0L3VHX",
+    "Name": "insights.awsteach.com.",
+    "Type": "AAAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/InsightsAAAA/Resource"
+   }
+  },
+  "DeploySiteLogs9970AE67": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "RetentionInDays": 1,
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/DeploySiteLogs/Resource"
+   }
+  },
+  "DeploySiteAwsCliLayer88B0EBE2": {
+   "Type": "AWS::Lambda::LayerVersion",
+   "Properties": {
+    "Content": {
+     "S3Bucket": "cdk-frcopilot-assets-154833006816-us-east-1",
+     "S3Key": "98f62bef9320f8c0a0a7be21d7c746f069131f196f51ffe3008a6bb730b368ec.zip"
+    },
+    "Description": "/opt/awscli/aws"
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/DeploySite/AwsCliLayer/Resource",
+    "aws:asset:path": "asset.98f62bef9320f8c0a0a7be21d7c746f069131f196f51ffe3008a6bb730b368ec.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Content"
+   }
+  },
+  "DeploySiteCustomResource512MiB5775DB62": {
+   "Type": "Custom::CDKBucketDeployment",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92",
+      "Arn"
+     ]
+    },
+    "SourceBucketNames": [
+     "cdk-frcopilot-assets-154833006816-us-east-1",
+     "cdk-frcopilot-assets-154833006816-us-east-1"
+    ],
+    "SourceObjectKeys": [
+     "ef0262a79fab3d42facbd5f1c56ee7d1aa1d5973efdd1aefc57d553dfb6056f3.zip",
+     "43bd79ae95d2bb7fb8f4750370a52f59b4ecdcce2c1b91ec07f276e095c439c1.zip"
+    ],
+    "SourceMarkers": [
+     {},
+     {
+      "<<marker:0xbaba:0>>": {
+       "Fn::Join": [
+        "",
+        [
+         "\"",
+         {
+          "Fn::ImportValue": "FRCopilot:ExportsOutputRefRepsC0120BBE43A91D44"
+         },
+         "\""
+        ]
+       ]
+      },
+      "<<marker:0xbaba:1>>": {
+       "Fn::Join": [
+        "",
+        [
+         "\"",
+         {
+          "Ref": "InsightsWebD6A97533"
+         },
+         "\""
+        ]
+       ]
+      }
+     }
+    ],
+    "SourceMarkersConfig": [
+     {},
+     {}
+    ],
+    "DestinationBucketName": {
+     "Ref": "SiteE53D7754"
+    },
+    "WaitForDistributionInvalidation": true,
+    "Prune": true,
+    "DistributionId": {
+     "Ref": "Cdn9963B1AD"
+    },
+    "DistributionPaths": [
+     "/*"
+    ],
+    "OutputObjectKeys": true
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/DeploySite/CustomResource-512MiB/Default"
+   }
+  },
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/Resource"
+   }
+  },
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":s3:::cdk-frcopilot-assets-154833006816-us-east-1"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":s3:::cdk-frcopilot-assets-154833006816-us-east-1/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "SiteE53D7754",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "SiteE53D7754",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "cloudfront:CreateInvalidation",
+        "cloudfront:GetInvalidation"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726",
+    "Roles": [
+     {
+      "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "arm64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-frcopilot-assets-154833006816-us-east-1",
+     "S3Key": "35328da138f26fbd9160297abc9a2522d93dbf75878cd5114a9c050419fc1ce0.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+     }
+    },
+    "Handler": "index.handler",
+    "Layers": [
+     {
+      "Ref": "DeploySiteAwsCliLayer88B0EBE2"
+     }
+    ],
+    "LoggingConfig": {
+     "LogGroup": {
+      "Ref": "DeploySiteLogs9970AE67"
+     }
+    },
+    "MemorySize": 512,
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.13",
+    "Tags": [
+     {
+      "Key": "Owner",
+      "Value": "Instructor"
+     },
+     {
+      "Key": "Project",
+      "Value": "FRCopilot"
+     }
+    ],
+    "Timeout": 900
+   },
+   "DependsOn": [
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726",
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Resource",
+    "aws:asset:path": "asset.35328da138f26fbd9160297abc9a2522d93dbf75878cd5114a9c050419fc1ce0",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/8VSTW8TMRD9Lc3ZNSWhAnHbJgIOrRolggtCkeOdbKf1elaecUNY+b8jr5MmFeVQCYmT35svz5uZsR6/v9QXZ2bL57Z+OHe41v1SjH1QZsurnie6v4r2AURNN76g7/2oxZ/oRx9Hp2k5nid6cLEuoVUUmoEDgdv1PVjhUVL/MfuHKq45ObS7o6LCX6GrJCzFCLTgX9nYP04+iLoyDEk5alj319R8DhS7LPGAk0LT6n5BDrJ5eI+DKCgpZ9p1bXS/RN84EPKforeC5NUTmG78KZ5DaJF5z67NDsI3CJknxZNVb5hBWFf5UTV0jna5872e2ZMhKUuNRyHdf2UIcyI3dQh+uLznlqRMh40R2Jqd7hfAUnU4iNrDY9VsPWFLMc0gv4AFMMVgIc/uiewLFXwDckd1Nh1QafLQEFdR7ijgLwg56MiSshAEN2jzqow3DQTdT4+2HH5Ck7KOYr0J5GXQ1JFn+AKmhsDHPb3smCFLwHUcdrKc3AZs0FfWAvOUvARyOfcv5tPkpAJFgcuJ7qsFWAp1+TSjJYiqjDGFpaSmkYXaF8f23DUP9Ig1hGHMwyHk8aNvlB3iVmEfyLra8p9lb6N0UZ4t6MZ0XS5Q7nXl8tmtzJatw6GGw+ESk/JUg77nN4/jd/rtB31xds+I5yF6wRb0ory/Ad+OEmUHBQAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "FRCopilotInsights/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "ApiEndpoint4F160690": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Ref": "ApiF70053CD"
+      },
+      ".execute-api.us-east-1.",
+      {
+       "Ref": "AWS::URLSuffix"
+      },
+      "/",
+      {
+       "Ref": "ApiDeploymentStageprod3EB9684E"
+      },
+      "/"
+     ]
+    ]
+   }
+  },
+  "InsightsUrl": {
+   "Value": "https://insights.awsteach.com"
+  },
+  "KnowledgeBucket": {
+   "Value": {
+    "Ref": "KnowledgeB6F5C7B3"
+   }
+  },
+  "KnowledgeObject": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "s3://",
+      {
+       "Ref": "KnowledgeB6F5C7B3"
+      },
+      "/projectknowledge.md"
+     ]
+    ]
+   }
+  },
+  "InvocationLogGroup": {
+   "Value": {
+    "Ref": "InvocationLogsCD36EA0A"
+   }
+  },
+  "InvocationLargePayloadBucket": {
+   "Value": {
+    "Ref": "InvocationLargeBFE03F38"
+   }
+  },
+  "ChatbotModelId": {
+   "Value": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  "InsightsWebClientId": {
+   "Value": {
+    "Ref": "InsightsWebD6A97533"
+   }
+  },
+  "InsightsApiUrl": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Ref": "ApiF70053CD"
+      },
+      ".execute-api.us-east-1.",
+      {
+       "Ref": "AWS::URLSuffix"
+      },
+      "/",
+      {
+       "Ref": "ApiDeploymentStageprod3EB9684E"
+      },
+      "/"
+     ]
+    ]
+   }
+  },
+  "InsightsDistributionId": {
+   "Value": {
+    "Ref": "Cdn9963B1AD"
+   }
+  },
+  "InsightsSiteBucket": {
+   "Value": {
+    "Ref": "SiteE53D7754"
+   }
+  }
+ },
+ "Mappings": {
+  "AWSCloudFrontPartitionHostedZoneIdMap": {
+   "aws": {
+    "zoneId": "Z2FDTNDATAQYW2"
+   },
+   "aws-cn": {
+    "zoneId": "Z3RFFRIM2A3IF5"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/frcopilot/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}
